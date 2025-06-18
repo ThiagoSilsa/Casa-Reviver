@@ -1,0 +1,10 @@
+
+[   
+    { "label" : "Sobre nós", "href": "/sobre"},
+    { "label" : "Atividades", "href": "/atividades"},
+    { "label" : "Doações", "href": "/doacoes"},
+    { "label" : "Fotos", "href": "/fotos"},
+    { "label" : "Seja voluntário", "href": "/seja-voluntario"},
+    { "label" : "Contato", "href": "/contato"}
+
+]

@@ -1,58 +1,83 @@
+// Como será utilizado o useState que é do lado do cliente, usa-se o use client
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import routes from "@/data/routes.json";
+import styles from "@/styles/Header.module.css";
+import Image from "next/image";
 
-const navItems = [
-  { label: "Início", href: "/" },
-  { label: "Sobre", href: "/sobre" },
-  { label: "Eventos", href: "/eventos" },
-  { label: "Doações", href: "/doacoes" },
-  { label: "Fotos", href: "/fotos" },
-  { label: "Seja Voluntário", href: "/seja-voluntario" },
-  { label: "Contato", href: "/contato" },
-];
+
+
 
 export function Header() {
+  // definindo o método para abri o menu hamburguer
+  // open começará em false!
   const [open, setOpen] = useState(false);
 
+
   return (
-    <header className="w-full border-b bg-white shadow-sm">
-      <div className="container mx-auto flex items-center justify-between px-4 py-4">
-        <Link href="/" className="text-2xl font-bold text-blue-700">
-          Casa Reviver
-        </Link>
-        <nav className="hidden md:flex gap-4">
-          {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="hover:text-blue-600 font-medium">
-              {item.label}
+    <header className={`w-full border-b-2 ${styles.header}`}>
+      <div
+        className={`container mx-auto flex justify-between items-center px-4 py-3`}
+      >
+        <div className="flex items-center">
+          <Link href={"/"}>
+            <Image
+              width={80}
+              height={60}
+              alt="Logo Casa Reviver Preta"
+              src="/logo/LogoTextoPreta.png"
+            />
+          </Link>
+          {/* <Link href={"/"} className={`font-bold text-1xl hover:text-amber-600`}>
+            {/* Tem que virar a logo depois! */}
+            {/* Casa Reviver
+          </Link> */}
+        </div>
+        {/* o nav estará escondido até que a tela seja maior que 768px, quando o siplay será flex */}
+        <nav className="hidden md:flex gap-2">
+          {routes.map((rota) => (
+            <Link
+              key={rota.href}
+              href={rota.href}
+              className="block py-2 font-medium text-gray-800 hover:text-amber-600"
+            >
+              {rota.label}
             </Link>
           ))}
         </nav>
         <Button
           variant="ghost"
-          className="md:hidden"
+          className="md:hidden hover:cursor-pointer"
+          // Ao clicar irá fazer o oposto da definição, logo, de false para true e vice-versa
           onClick={() => setOpen(!open)}
-          aria-label="Menu"
         >
-          <Menu className="w-6 h-6" />
+          {
+            // Se open == true, o X será exibido, se não, será o menu hamburguer
+            open ? <X /> : <Menu />
+          }
         </Button>
+
+        {
+          // Função para aparecer as opções
+          open && (
+            <nav className={`md:hidden flex px-4 ${styles.menu}`}>
+              {routes.map((rota) => (
+                <Link
+                  key={rota.href}
+                  href={rota.href}
+                  onClick={() => setOpen(false)}
+                  className="block py-2 font-medium text-gray-800 hover:text-amber-600"
+                >
+                  {rota.label}
+                </Link>
+              ))}
+            </nav>
+          )
+        }
       </div>
-      {open && (
-        <nav className="md:hidden px-4 pb-4">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="block py-2 font-medium text-gray-800 hover:text-blue-600"
-              onClick={() => setOpen(false)}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </nav>
-      )}
     </header>
   );
 }

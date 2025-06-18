@@ -1,0 +1,23 @@
+.historia{
+    padding-right: 2px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.historia h1{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.historia p{
+    padding-inline: 5px;
+    text-indent: 2em;
+    text-align: justify;
+}
+.historiaImagem{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
