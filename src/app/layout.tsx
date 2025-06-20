@@ -20,7 +20,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="pt-BR">
       <body className={`${montserrat.className} bg-white text-gray-900`}>
         <Header />
-        <main className="min-h-[calc(100vh-160px)] px-0 pt-[60px]">{children}</main>
+        <main className="min-h-[calc(100vh-160px)] px-0 pt-[104px]">{children}</main>
         <Footer />
       </body>
     </html>

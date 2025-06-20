@@ -1,13 +1,16 @@
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import {CarrosselFotos} from "@/components/CarrosselFotos";
+import {ComoFunciona} from "@/components/ComoFunciona";
+import {BotaoFormulario} from "@/components/BotaoFormulario";
+import {CarrosselDepoimentos} from "@/components/CarrosselDepoimentos";
 
-export default function Sobre() {
+export default function SejaVoluntario() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+    <section className="flex min-h-screen flex-col items-center justify-center bg-gray-100">
       <h1 className={`text-3xl font-bold mb-4 `}>Página Seja Voluntário</h1>
-      <Link href={"/"}>
-        <Button className="hover:cursor-pointer">Voltar</Button>
-      </Link>
-    </main>
+      <CarrosselFotos />
+      <ComoFunciona />
+      <CarrosselDepoimentos />
+      <BotaoFormulario />
+    </section>
   );
 }
