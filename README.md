@@ -52,7 +52,7 @@ casa-reviver/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/casa-reviver.git
+git clone https://github.com/ThiagoSilsa/Casa-Reviver.git
 cd casa-reviver
 
 # Instale as dependências
