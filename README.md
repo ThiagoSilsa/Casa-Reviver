@@ -34,14 +34,13 @@ O projeto está sendo desenvolvido como uma extensão universitária, com foco e
 
 ```bash
 casa-reviver/
-├── public/                # Imagens públicas, favicon, etc.
+├── public/                # Imagens públicas
 ├── src/
+│   ├── app/               # Rotas, CSS Global, Layouts, etc
 │   ├── components/        # Componentes reutilizáveis
-│   ├── pages/             # Rotas/páginas do Next.js
+│   ├── data/              # Arquivos Json para armazenamento
 │   ├── styles/            # Estilização com CSS Modules
-│   ├── lib/               # 
-│   └── layout/            # Layout padrão e wrappers globais
-├── .env.local             # 
+│   └── lib/               # 
 ├── next.config.js         # Configuração do Next.js
 └── package.json
 
