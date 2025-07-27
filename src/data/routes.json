@@ -1,10 +1,9 @@
 
 [   
-    { "label" : "Sobre nós", "href": "/sobre"},
+    { "label" : "História", "href": "/historia"},
+    { "label" : "Projetos", "href": "/projetos"},
     { "label" : "Atividades", "href": "/atividades"},
-    { "label" : "Doações", "href": "/doacoes"},
-    { "label" : "Fotos", "href": "/fotos"},
-    { "label" : "Seja voluntário", "href": "/seja-voluntario"},
-    { "label" : "Contato", "href": "/contato"}
-
+    { "label" : "Contato", "href": "/contato"},
+    { "label" : "Seja voluntário", "href": "/voluntario"},
+    { "label" : "Quero doar", "href": "/doacoes"}
 ]

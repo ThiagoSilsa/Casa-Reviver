@@ -28,7 +28,7 @@ const dados = [
   },
 ];
 
-export default function ImpactoHome() {
+export default function ImpactoIcones() {
   return (
     <section className="bg-blue-50 py-12">
       <div className="container mx-auto px-4">

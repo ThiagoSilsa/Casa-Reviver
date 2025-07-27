@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import styles from "@/styles/Methods.module.css";
 import Link from "next/link";
-import ImpactoHome from "@/components/ImpactoHome";
 
 export default function HomePage() {
   return (
@@ -17,7 +16,7 @@ export default function HomePage() {
             <Button className="hover:cursor-pointer">Conheça a Casa Reviver</Button>
           </Link>
         </div>
-        <ImpactoHome />
+
       </section>
     </>
   );

@@ -9,8 +9,6 @@ import styles from "@/styles/Header.module.css";
 import Image from "next/image";
 
 
-
-
 export function Header() {
   // definindo o método para abri o menu hamburguer
   // open começará em false!
@@ -18,7 +16,7 @@ export function Header() {
 
 
   return (
-    <header className={`w-full border-b-2 ${styles.header}`}>
+    <header className={`w-full border-b-2 ${styles.header} pr-4 pl-10`}>
       <div
         className={`container mx-auto flex justify-between items-center px-4 py-3`}
       >
@@ -31,12 +29,9 @@ export function Header() {
               src="/logo/LogoTextoPreta.png"
             />
           </Link>
-          {/* <Link href={"/"} className={`font-bold text-1xl hover:text-amber-600`}>
-            {/* Tem que virar a logo depois! */}
-            {/* Casa Reviver
-          </Link> */}
         </div>
-        {/* o nav estará escondido até que a tela seja maior que 768px, quando o siplay será flex */}
+
+        {/* o nav estará escondido até que a tela seja maior que 768px, quando o display será flex */}
         <nav className="hidden md:flex gap-2">
           {routes.map((rota) => (
             <Link
