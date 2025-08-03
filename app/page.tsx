@@ -32,7 +32,7 @@ export default function Home() {
             <Link href="/doacoes">
               <Button
                 size="lg"
-                className="bg-white text-[var(--casa-laranja)] hover:bg-gray-100 text-lg px-8 py-4"
+                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
               >
                 Doar Agora
                 <Heart className="ml-2 w-5 h-5" />
@@ -41,8 +41,7 @@ export default function Home() {
             <Link href="/seja-voluntario">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[var(--casa-azul)] text-lg px-8 py-4"
+                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
               >
                 Seja Voluntário
                 <Users className="ml-2 w-5 h-5" />
@@ -213,7 +212,7 @@ export default function Home() {
             <Link href="/doacoes">
               <Button
                 size="lg"
-                className="bg-[var(--casa-amarelo)] text-gray-900 hover:bg-[var(--casa-amarelo)]/90 text-lg px-8 py-4"
+                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
               >
                 Doar Agora
                 <Heart className="ml-2 w-5 h-5" />
@@ -222,11 +221,10 @@ export default function Home() {
             <Link href="/seja-voluntario">
               <Button
                 size="lg"
-                variant="outline"
-                className="border-white text-white hover:bg-white hover:text-[var(--casa-azul)] text-lg px-8 py-4"
+                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
               >
                 Seja Voluntário
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <Users className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>
