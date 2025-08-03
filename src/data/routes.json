@@ -1,9 +1,0 @@
-
-[   
-    { "label" : "História", "href": "/historia"},
-    { "label" : "Projetos", "href": "/projetos"},
-    { "label" : "Atividades", "href": "/atividades"},
-    { "label" : "Contato", "href": "/contato"},
-    { "label" : "Seja voluntário", "href": "/voluntario"},
-    { "label" : "Quero doar", "href": "/doacoes"}
-]
