@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Shield, Users, Sparkles } from 'lucide-react';
+import { ArrowRight, Calendar, Shield, Users, Sparkles, Heart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
@@ -220,15 +220,22 @@ export default function Atividades() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/seja-voluntario">
-              <Button size="lg" className="bg-[var(--casa-azul)] hover:bg-[var(--casa-azul)]/90 text-white text-lg px-8 py-4">
-                Seja Voluntário
-                <ArrowRight className="ml-2 w-5 h-5" />
+            <Link href="/doacoes">
+              <Button
+                size="lg"
+                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
+              >
+                Doar Agora
+                <Heart className="ml-2 w-5 h-5" />
               </Button>
             </Link>
-            <Link href="/contato">
-              <Button size="lg" variant="outline" className="border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white text-lg px-8 py-4">
-                Entre em Contato
+            <Link href="/seja-voluntario">
+              <Button
+                size="lg"
+                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+              >
+                Seja Voluntário
+                <Users className="ml-2 w-5 h-5" />
               </Button>
             </Link>
           </div>

@@ -1,0 +1,1 @@
+um modelo de página tanto para atividades quanto para projetos e só mudar o texto

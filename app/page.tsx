@@ -1,4 +1,6 @@
 "use client";
+import { useState } from "react";
+
 import Link from "next/link";
 import {
   Heart,
@@ -13,22 +15,56 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+    const bannerImages = [
+    "/banner-principal/Foto1.png",
+    "/banner-principal/Foto2.jpg",
+    "/banner-principal/Foto3.jpg",
+    "/banner-principal/Foto4.jpg",
+
+  ];
+
+  useState(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  });
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-[var(--casa-amarelo)] via-[var(--casa-laranja)] to-[var(--casa-azul)] text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-black/20"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+            <section className="relative h-96 overflow-hidden">
+        <div className="absolute inset-0">
+          {bannerImages.map((image, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              <img 
+                src={image} 
+                alt={`Voluntários em ação ${index + 1}`}
+                className="w-full h-full object-cover"
+              />
+            </div>
+          ))}
+        </div>
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative h-full flex items-center justify-center text-center text-white">
+          <div className="max-w-4xl px-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
             Transformando Vidas na
             <span className="block text-[var(--casa-amarelo)]">Comunidade</span>
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fadeInUp">
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fadeInUp">
             Desde 2006, a Casa Reviver atende mais de 200 famílias no Morro do
             Estado com atividades socioeducativas, apoio psicológico e
             desenvolvimento social.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
+ <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
             <Link href="/doacoes">
               <Button
                 size="lg"
@@ -48,8 +84,10 @@ export default function Home() {
               </Button>
             </Link>
           </div>
+          </div>
         </div>
       </section>
+  
 
       {/* Impacto */}
       <section className="py-16 bg-gray-50">

@@ -41,7 +41,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <Link
                 key={item.href}
@@ -57,7 +57,7 @@ const Header = () => {
           </nav>
 
           {/* Action Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/seja-voluntario"
               className="px-4 py-2 text-sm font-medium text-[var(--casa-azul)] border border-[var(--casa-azul)] rounded-md hover:bg-[var(--casa-azul)] hover:text-white transition-colors"
@@ -75,7 +75,7 @@ const Header = () => {
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-[var(--casa-laranja)]"
+            className="lg:hidden p-2 rounded-md text-gray-700 hover:text-[var(--casa-laranja)]"
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
