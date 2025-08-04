@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function Projetos() {
   const projetos = [
@@ -57,7 +58,7 @@ export default function Projetos() {
       descricao:
         "Espaço de escuta, acolhimento e fortalecimento entre as mulheres da comunidade.",
       imagem:
-        "https://images.pexels.com/photos/3280130/pexels-photo-3280130.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "/projetos/Foto5.png",
       icon: Shield,
       cor: "casa-laranja",
     },
@@ -67,7 +68,7 @@ export default function Projetos() {
       descricao:
         "Cuidar de quem cuida. Espaço de escuta acolhedora para mães que vivenciam sobrecarga.",
       imagem:
-        "https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "/projetos/Foto6.jpg",
       icon: Sparkles,
       cor: "casa-azul",
     },
@@ -77,7 +78,7 @@ export default function Projetos() {
       descricao:
         "Economia circular e sustentabilidade: pegar o que precisa e deixar o que não usa mais.",
       imagem:
-        "https://images.pexels.com/photos/1749900/pexels-photo-1749900.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "/projetos/Foto7.png",
       icon: Gift,
       cor: "casa-roxo",
     },
@@ -87,7 +88,7 @@ export default function Projetos() {
       descricao:
         "Grupo de teatro formado por mulheres da comunidade que conta histórias de vida e território.",
       imagem:
-        "https://images.pexels.com/photos/3646372/pexels-photo-3646372.jpeg?auto=compress&cs=tinysrgb&w=500",
+        "/projetos/Foto8.jpg",
       icon: Calendar,
       cor: "casa-amarelo",
     },
@@ -96,20 +97,41 @@ export default function Projetos() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-laranja)] to-[var(--casa-roxo)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Nossos <span className="text-[var(--casa-amarelo)]">Projetos</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            8 projetos transformando vidas e construindo um futuro melhor para
-            nossa comunidade
-          </p>
-        </div>
-      </section>
+      <section className="relative overflow-hidden md:h-96 py-5">
+                    <div className="absolute inset-0">
+                      <div
+                        key=""
+                        className={`absolute inset-0 transition-opacity duration-1000 "
+                          }`}
+                      >
+                        <Image
+                          className="w-full h-full object-cover object-[center_40%]"
+                          width={100}
+                          height={60}
+                          alt={`Voluntários em ação`}
+                          src={"/banner-projetos/Foto1.jpg"}
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
+                      <div className="max-w-4xl px-4">
+                        <div id="Textos" className="flex-col">
+                          <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
+                            Nossos <span className="text-[var(--casa-amarelo)]"> projetos</span>
+                          </h1>
+                      <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+                        8 projetos transformando vidas e construindo um futuro melhor para
+            nossa comunidade.
+                      </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+      
 
       {/* Grid de Projetos */}
-      <section className="py-16">
+      <section className="py-16 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {projetos.map((projeto, index) => {

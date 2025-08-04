@@ -3,6 +3,7 @@ import { Play, ArrowRight, Heart, Users } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Historia() {
   const etapasHistoria = [
@@ -11,40 +12,35 @@ export default function Historia() {
       titulo: "O Sonho Começa",
       descricao:
         "Um menino da comunidade sonha com um espaço seguro para todas as famílias do Morro do Estado.",
-      imagem:
-        "/linha-do-tempo/Foto1.jpg",
+      imagem: "/linha-do-tempo/Foto1.jpg",
     },
     {
       ano: "2008",
       titulo: "Primeiros Passos",
       descricao:
         "Subindo as escadarias com um saco de balas e histórias infantis para contar às crianças.",
-      imagem:
-        "/linha-do-tempo/Foto2.png",
+      imagem: "/linha-do-tempo/Foto2.png",
     },
     {
       ano: "2015",
       titulo: "Crescimento",
       descricao:
         "Expansão das atividades e construção da sede própria com ajuda da comunidade.",
-      imagem:
-        "/linha-do-tempo/Foto3.png",
+      imagem: "/linha-do-tempo/Foto3.png",
     },
     {
       ano: "2020",
       titulo: "Adaptação",
       descricao:
         "Reinvenção durante a pandemia, mantendo o apoio às famílias de forma criativa.",
-      imagem:
-        "/linha-do-tempo/Foto4.jpg",
+      imagem: "/linha-do-tempo/Foto4.jpg",
     },
     {
       ano: "2024",
       titulo: "Hoje",
       descricao:
         "19 anos de história, mais de 200 famílias atendidas e uma referência na comunidade.",
-      imagem:
-        "/linha-do-tempo/Foto5.jpg",
+      imagem: "/linha-do-tempo/Foto5.jpg",
     },
   ];
 
@@ -57,27 +53,47 @@ export default function Historia() {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Nossa <span className="text-[var(--casa-amarelo)]">História</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            19 anos de transformação, resistência e amor pela comunidade
+      <section className="relative overflow-hidden md:h-96 py-5 ">
+        <div className="absolute inset-0">
+          <div
+            key=""
+            className={`absolute inset-0 transition-opacity duration-1000 "
+              }`}
+          >
+            <Image
+              className="w-full h-full object-cover object-[center_70%]"
+              width={100}
+              height={60}
+              alt={`Voluntários em ação`}
+              src={"/banner-historia/Foto1.jpg"}
+            />
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
+          <div className="max-w-4xl px-4">
+            <div id="Textos" className="flex-col">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp text-left">
+                Nossa <span className="text-[var(--casa-amarelo)]"> história</span>
+              </h1>
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-left">
+            19 anos de transformação, resistência e amor pela comunidade.
           </p>
+            </div>
+          </div>
         </div>
       </section>
+     
 
       {/* Sobre Nós / Vídeo */}
-      <section className="py-16">
+      <section className="py-16 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
                 Como o projeto <span className="text-gradient">surgiu?</span>
               </h2>
-              <div className="text-lg text-gray-700 space-y-4">
+              <div className="text-lg text-gray-700 space-y-4 text-justify">
                 <p>
                   A Casa Reviver nasceu em 2006, a partir do sonho puro e
                   corajoso de um menino da comunidade. Desde pequeno, ele

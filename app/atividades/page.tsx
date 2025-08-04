@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { ArrowRight, Calendar, Shield, Users, Sparkles, Heart } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Image from 'next/image';
 
 export default function Atividades() {
   const atividades = [
@@ -47,19 +48,39 @@ export default function Atividades() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-roxo)] to-[var(--casa-azul)] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Nossas <span className="text-[var(--casa-amarelo)]">Atividades</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            4 atividades fixas anuais abertas para toda comunidade e cidade
-          </p>
-        </div>
-      </section>
+            <section className="relative overflow-hidden md:h-96 py-5">
+                    <div className="absolute inset-0">
+                      <div
+                        key=""
+                        className={`absolute inset-0 transition-opacity duration-1000 "
+                          }`}
+                      >
+                        <Image
+                          className="w-full h-full object-cover object-[center_45%]"
+                          width={100}
+                          height={60}
+                          alt={`Voluntários em ação`}
+                          src={"/banner-atividades/Foto1.png"}
+                        />
+                      </div>
+                    </div>
+                    <div className="absolute inset-0 bg-black/70"></div>
+                    <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
+                      <div className="max-w-4xl px-4">
+                        <div id="Textos" className="flex-col">
+                          <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
+                            Nossas <span className="text-[var(--casa-amarelo)]"> atividades</span>
+                          </h1>
+                      <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+                        4 atividades fixas anuais abertas para toda comunidade e cidade.
+                      </p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
 
       {/* Grid de Atividades */}
-      <section className="py-16">
+      <section className="py-16 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {atividades.map((atividade, index) => {

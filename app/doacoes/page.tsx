@@ -290,14 +290,6 @@ export default function Doacoes() {
               {copied ? <Check className="mr-2 w-5 h-5" /> : <Copy className="mr-2 w-5 h-5" />}
               {copied ? 'CNPJ Copiado!' : 'Copiar CNPJ PIX'}
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-[var(--casa-azul)] text-lg px-8 py-4"
-            >
-              Falar Conosco
-              <Heart className="ml-2 w-5 h-5" />
-            </Button>
           </div>
         </div>
       </section>

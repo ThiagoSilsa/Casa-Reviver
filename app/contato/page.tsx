@@ -38,10 +38,10 @@ export default function Contato() {
       <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-laranja)] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Entre em <span className="text-[var(--casa-amarelo)]">Contato</span>
+            Entre em <span className="text-[var(--casa-amarelo)]">contato</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Estamos prontos para ouvir você. Tire suas dúvidas, faça sugestões ou venha nos conhecer
+            Estamos prontos para ouvir você. Tire suas dúvidas, faça sugestões ou venha nos conhecer!
           </p>
         </div>
       </section>

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
 
 import Link from "next/link";
 import {
@@ -17,12 +18,10 @@ import { Card, CardContent } from "@/components/ui/card";
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-    const bannerImages = [
+  const bannerImages = [
     "/banner-principal/Foto1.png",
     "/banner-principal/Foto2.jpg",
-    "/banner-principal/Foto3.jpg",
-    "/banner-principal/Foto4.jpg",
-
+    "/banner-principal/Foto3.jpg"
   ];
 
   useState(() => {
@@ -33,64 +32,69 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen ">
       {/* Hero Section */}
-            <section className="relative h-96 overflow-hidden">
+      <section className="relative overflow-hidden md:h-96 py-5">
         <div className="absolute inset-0">
           {bannerImages.map((image, index) => (
             <div
               key={index}
               className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
+                index === currentSlide ? "opacity-100" : "opacity-0"
               }`}
             >
-              <img 
-                src={image} 
-                alt={`Voluntários em ação ${index + 1}`}
+              <Image
                 className="w-full h-full object-cover"
+                width={100}
+                height={60}
+                alt={`Voluntários em ação ${index + 1}`}
+                src={image}
               />
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative h-full flex items-center justify-center text-center text-white">
+        <div className="absolute inset-0 bg-black/70"></div>
+        <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start">
           <div className="max-w-4xl px-4">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
-            Transformando Vidas na
-            <span className="block text-[var(--casa-amarelo)]">Comunidade</span>
-          </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate-fadeInUp">
-            Desde 2006, a Casa Reviver atende mais de 200 famílias no Morro do
-            Estado com atividades socioeducativas, apoio psicológico e
-            desenvolvimento social.
-          </p>
- <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
-            <Link href="/doacoes">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Doar Agora
-                <Heart className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/seja-voluntario">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Seja Voluntário
-                <Users className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-          </div>
+            <div id="Textos" className="flex-col">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp text-left">
+                Transformando vidas na
+                <span className="block text-[var(--casa-amarelo)]">
+                  comunidade
+                </span>
+              </h1>
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl mx-auto animate-fadeInUp text-left">
+                Desde 2006, a Casa Reviver atende mais de 200 famílias no Morro
+                do Estado com atividades socioeducativas, apoio psicológico e
+                desenvolvimento social.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-left animate-fadeInUp">
+              <Link href="/doacoes">
+                <Button
+                  size="lg"
+                  className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
+                >
+                  Doar Agora
+                  <Heart className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href="/seja-voluntario">
+                <Button
+                  size="lg"
+                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                >
+                  Seja Voluntário
+                  <Users className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
-  
 
       {/* Impacto */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -110,7 +114,7 @@ export default function Home() {
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
                 200+
               </h3>
-              <p className="text-gray-600">Famílias Atendidas</p>
+              <p className="text-gray-600">Famílias atendidas</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[var(--casa-azul)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
@@ -119,7 +123,7 @@ export default function Home() {
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
                 19
               </h3>
-              <p className="text-gray-600">Anos de História</p>
+              <p className="text-gray-600">Anos de história</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-[var(--casa-roxo)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
@@ -128,16 +132,16 @@ export default function Home() {
               <h3 className="text-3xl font-bold text-[var(--casa-roxo)] mb-2">
                 8
               </h3>
-              <p className="text-gray-600">Projetos Ativos</p>
+              <p className="text-gray-600">Projetos ativos</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-amarelo)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
-                <Heart className="w-8 h-8 text-gray-900" />
+              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
+                <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[var(--casa-amarelo)] mb-2">
+              <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
                 ∞
               </h3>
-              <p className="text-gray-600">Vidas Transformadas</p>
+              <p className="text-gray-600">Vidas transformadas</p>
             </div>
           </div>
         </div>

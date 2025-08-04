@@ -4,16 +4,10 @@ import { useState } from 'react';
 import { Heart, Users, Calendar, BookOpen, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function SejaVoluntario() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  
-  const bannerImages = [
-    "/banner-principal/Foto1.png",
-    "https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1153213/pexels-photo-1153213.jpeg?auto=compress&cs=tinysrgb&w=800"
-  ];
 
   const oportunidades = [
     {
@@ -42,56 +36,43 @@ export default function SejaVoluntario() {
     }
   ];
 
-  // Auto slide do banner
-  useState(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % bannerImages.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  });
 
   return (
     <div className="min-h-screen">
-      {/* Banner com Carrossel */}
-      <section className="relative h-96 overflow-hidden">
-        <div className="absolute inset-0">
-          {bannerImages.map((image, index) => (
-            <div
-              key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                index === currentSlide ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              <img 
-                src={image} 
-                alt={`Voluntários em ação ${index + 1}`}
-                className="w-full h-full object-cover"
-              />
-            </div>
-          ))}
-        </div>
-        <div className="absolute inset-0 bg-black/50"></div>
-        <div className="relative h-full flex items-center justify-center text-center text-white">
-          <div className="max-w-4xl px-4">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Seja <span className="text-[var(--casa-amarelo)]">Voluntário</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8">
-              Transforme vidas e seja parte da nossa história de amor e dedicação à comunidade
-            </p>
-            <Button 
-              size="lg" 
-              className="bg-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)]/90 text-white text-lg px-8 py-4"
-            >
-              Inscreva-se Agora
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-          </div>
-        </div>
-      </section>
+      <section className="relative overflow-hidden md:h-96 py-5">
+              <div className="absolute inset-0">
+                <div
+                  key=""
+                  className={`absolute inset-0 transition-opacity duration-1000 "
+                    }`}
+                >
+                  <Image
+                    className="w-full h-full object-cover object-[center_70%]"
+                    width={100}
+                    height={60}
+                    alt={`Voluntários em ação`}
+                    src={"/banner-voluntario/Foto1.jpg"}
+                  />
+                </div>
+              </div>
+              <div className="absolute inset-0 bg-black/60"></div>
+              <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
+                <div className="max-w-4xl px-4">
+                  <div id="Textos" className="flex-col">
+                    <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
+                      Seja <span className="text-[var(--casa-amarelo)]"> voluntário</span>
+                    </h1>
+                <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+                  Transforme vidas e seja parte da nossa história de amor e dedicação à comunidade!
+                </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+      
 
       {/* Como se Tornar Voluntário */}
-      <section className="py-16">
+      <section className="py-16 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -188,9 +169,9 @@ export default function SejaVoluntario() {
       {/* Depoimentos de Voluntários */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 ">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Depoimentos de <span className="text-gradient">Voluntários</span>
+              Depoimentos de <span className="text-gradient">voluntários</span>
             </h2>
           </div>
           
@@ -264,14 +245,24 @@ export default function SejaVoluntario() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-[var(--casa-amarelo)] text-gray-900 hover:bg-[var(--casa-amarelo)]/90 text-lg px-8 py-4">
-              Quero me Inscrever
-              <Heart className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-[var(--casa-roxo)] text-lg px-8 py-4">
-              Saiba Mais
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+              <Link href="/doacoes">
+                <Button
+                  size="lg"
+                  className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
+                >
+                  Doar Agora
+                  <Heart className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <Link href="/seja-voluntario">
+                <Button
+                  size="lg"
+                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                >
+                  Seja Voluntário
+                  <Users className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
           </div>
           
           <div className="mt-8 text-center">
