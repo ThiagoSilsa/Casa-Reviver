@@ -13,86 +13,10 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import projetos from "@/data/projetos";
 
 export default function Projetos() {
-  const projetos = [
-    {
-      id: "ler-o-mundo",
-      nome: "Projeto Ler o Mundo",
-      descricao:
-        "Oferecendo aos jovens e adultos a chance de enxergar a vida com novos olhos, por meio da leitura, escuta e descoberta.",
-      imagem: "/projetos/Foto1.jpg",
-      icon: BookOpen,
-      cor: "casa-azul",
-    },
-    {
-      id: "roda-gestante",
-      nome: "Roda de Gestante",
-      descricao:
-        "Espaço de acolhimento, escuta e proteção para futuras mamães durante a gestação.",
-      imagem: "/projetos/Foto2.jpg",
-      icon: Heart,
-      cor: "casa-laranja",
-    },
-    {
-      id: "atividades-socioeducativas",
-      nome: "Atividades Socioeducativas",
-      descricao:
-        "Criadas para o contraturno escolar das crianças, acolhendo, despertando e fortalecendo.",
-      imagem: "/projetos/Foto3.jpg",
-      icon: Users,
-      cor: "casa-roxo",
-    },
-    {
-      id: "os-crias",
-      nome: "Os Crias",
-      descricao:
-        "Projeto que orienta jovens para a vida adulta e mapeia demandas do território.",
-      imagem: "/projetos/Foto4.jpg",
-      icon: Mic,
-      cor: "casa-amarelo",
-    },
-    {
-      id: "roda-guerreiras",
-      nome: "Roda de Conversa Guerreiras",
-      descricao:
-        "Espaço de escuta, acolhimento e fortalecimento entre as mulheres da comunidade.",
-      imagem:
-        "/projetos/Foto5.jpg",
-      icon: Shield,
-      cor: "casa-laranja",
-    },
-    {
-      id: "maes-atipicas",
-      nome: "Roda de Conversa Mães Atípicas",
-      descricao:
-        "Cuidar de quem cuida. Espaço de escuta acolhedora para mães que vivenciam sobrecarga.",
-      imagem:
-        "/projetos/Foto6.jpg",
-      icon: Sparkles,
-      cor: "casa-azul",
-    },
-    {
-      id: "varal-solidario",
-      nome: "Varal Solidário",
-      descricao:
-        "Economia circular e sustentabilidade: pegar o que precisa e deixar o que não usa mais.",
-      imagem:
-        "/projetos/Foto7.jpg",
-      icon: Gift,
-      cor: "casa-roxo",
-    },
-    {
-      id: "as-marias",
-      nome: "As Marias",
-      descricao:
-        "Grupo de teatro formado por mulheres da comunidade que conta histórias de vida e território.",
-      imagem:
-        "/projetos/Foto8.jpg",
-      icon: Calendar,
-      cor: "casa-amarelo",
-    },
-  ];
+  
 
   return (
     <div className="min-h-screen">
@@ -114,13 +38,13 @@ export default function Projetos() {
                       </div>
                     </div>
                     <div className="absolute inset-0 bg-black/70"></div>
-                    <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
-                      <div className="max-w-4xl px-4">
+                    <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp px-4 sm:px-6 lg:px-8">
+                      <div className="max-w-4xl">
                         <div id="Textos" className="flex-col">
                           <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
                             Nossos <span className="text-[var(--casa-amarelo)]"> projetos</span>
                           </h1>
-                      <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+                      <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto  text-left">
                         8 projetos transformando vidas e construindo um futuro melhor para
             nossa comunidade.
                       </p>
@@ -191,7 +115,7 @@ export default function Projetos() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
@@ -220,10 +144,10 @@ export default function Projetos() {
               <p className="text-gray-600">Dias por Ano</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-amarelo)] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Gift className="w-8 h-8 text-gray-900" />
+              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4">
+                <Gift className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-[var(--casa-amarelo)] mb-2">
+              <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
                 ∞
               </h3>
               <p className="text-gray-600">Vidas Transformadas</p>

@@ -94,23 +94,27 @@ Roxo-Primário: #893ab8
     - Adicionar logo dos parceiros; ok
     - Favicon; ok
     - Refatorar fotos(Resize/Direcionamento); ok
-    - Rever fonte do layout;
-    - Rotas para atividades e projetos (Iguais)
-    - Bater todos os textos;
+    - Rotas para atividades e projetos (Iguais);  ok
+    - Colocar "Site em construção abaixo do header"
     - Refazer vídeo do /historia;
-    - Momentos especiais Colocar mais fotos carrossel, ou tirar isso!;
+    - Mapa;
+    - Rever formulário e como fazê-lo funcionar;
+    - /doacoes (Ver como ficará o pix), pegar algum site de exemplo;
 
 ### Quarta-feira:
 
-    - Rever formulário e como fazê-lo funcionar;
-    - Mapa;
     - Link para form seja voluntário;
     - Colocar foto de ia nos depoimentos;
-    - /doacoes (Ver como ficará o pix), pegar algum site de exemplo;
     - Ver como ficará para entregar o site;
+    - Momentos especiais Colocar mais fotos carrossel, ou tirar isso!;
+    - Anotar todas as informações que a lia me deve;
+        - Horários e local dos projetos;
+        - Depoimentos;
 
 ## Backlog:
-
+    - Melhorar a 404
+    - Bater todos os textos;
+    - Rever fonte do layout;
     - Texto em maiúsculo;
     - Botão para subir toda a página;
     - Isolar arquivos Json;
@@ -118,3 +122,6 @@ Roxo-Primário: #893ab8
     - Botões dos banners quebrados no mobile (clicando fora)
     - Adicionar mais efeitos
     - Contato para whatsapp?
+    - Passar todas as imgs para <Image/>
+    - Margem geral, linha imaginária
+    - Colocar depoimentos em cada projeto
