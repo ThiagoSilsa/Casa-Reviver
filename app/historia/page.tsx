@@ -19,14 +19,14 @@ export default function Historia() {
       titulo: "Primeiros Passos",
       descricao:
         "Subindo as escadarias com um saco de balas e histórias infantis para contar às crianças.",
-      imagem: "/linha-do-tempo/Foto2.png",
+      imagem: "/linha-do-tempo/Foto2.jpg",
     },
     {
       ano: "2015",
       titulo: "Crescimento",
       descricao:
         "Expansão das atividades e construção da sede própria com ajuda da comunidade.",
-      imagem: "/linha-do-tempo/Foto3.png",
+      imagem: "/linha-do-tempo/Foto3.jpg",
     },
     {
       ano: "2020",
@@ -74,16 +74,16 @@ export default function Historia() {
           <div className="max-w-4xl px-4">
             <div id="Textos" className="flex-col">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp text-left">
-                Nossa <span className="text-[var(--casa-amarelo)]"> história</span>
+                Nossa{" "}
+                <span className="text-[var(--casa-amarelo)]"> história</span>
               </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-left">
-            19 anos de transformação, resistência e amor pela comunidade.
-          </p>
+              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-left">
+                19 anos de transformação, resistência e amor pela comunidade.
+              </p>
             </div>
           </div>
         </div>
       </section>
-     
 
       {/* Sobre Nós / Vídeo */}
       <section className="py-16 animate-fadeInUp">
@@ -122,23 +122,15 @@ export default function Historia() {
             </div>
 
             <div className="relative">
-              <div className="aspect-video bg-gray-900 rounded-lg overflow-hidden shadow-2xl">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)]/90 text-white px-8 py-4"
-                    onClick={() =>
-                      window.open(
-                        "https://www.youtube.com/watch?v=nHkbwaDCeOg",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <Play className="w-6 h-6 mr-2" />
-                    Ver Nossa Música Oficial
-                  </Button>
-                </div>
-              </div>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/nHkbwaDCeOg?si=puPmH0tjAF4N3i7u"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -160,7 +152,7 @@ export default function Historia() {
             {etapasHistoria.map((etapa, index) => (
               <div
                 key={index}
-                className={`flex items-center gap-8 ${
+                className={`flex-col sm:flex items-center gap-8 ${
                   index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                 }`}
               >

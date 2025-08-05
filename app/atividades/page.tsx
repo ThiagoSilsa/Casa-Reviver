@@ -11,7 +11,7 @@ export default function Atividades() {
       id: 'caminhada-maio-laranja',
       nome: 'Caminhada Maio Laranja',
       descricao: 'Luta contra o abuso e exploração sexual de crianças e adolescentes. Uma mobilização que reúne toda a cidade.',
-      imagem: 'https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=500',
+      imagem: '/atividades/Foto1.jpg',
       icon: Shield,
       cor: 'casa-laranja',
       periodo: 'Maio - Anual'
@@ -20,7 +20,7 @@ export default function Atividades() {
       id: 'colonia-ferias',
       nome: 'Colônia de Férias',
       descricao: 'Realizada duas vezes ao ano com atividades como teatro, oficinas, dança, culinária e passeios culturais.',
-      imagem: 'https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=500',
+      imagem: '/atividades/Foto2.jpg',
       icon: Sparkles,
       cor: 'casa-azul',
       periodo: 'Verão e Inverno'
@@ -29,7 +29,7 @@ export default function Atividades() {
       id: 'dia-das-criancas',
       nome: 'Dia das Crianças',
       descricao: 'A maior atividade anual, reunindo mais de 500 crianças para um dia mágico de diversão e alegria.',
-      imagem: 'https://images.pexels.com/photos/1153213/pexels-photo-1153213.jpeg?auto=compress&cs=tinysrgb&w=500',
+      imagem: '/atividades/Foto3.jpg',
       icon: Users,
       cor: 'casa-amarelo',
       periodo: 'Outubro - Anual'
@@ -38,7 +38,7 @@ export default function Atividades() {
       id: 'natal',
       nome: 'Festa de Natal',
       descricao: 'Dedicada às crianças do socioeducativo com cartinhas, padrinhos e um dia repleto de carinho.',
-      imagem: 'https://images.pexels.com/photos/1303081/pexels-photo-1303081.jpeg?auto=compress&cs=tinysrgb&w=500',
+      imagem: '/atividades/Foto4.jpg',
       icon: Calendar,
       cor: 'casa-roxo',
       periodo: 'Dezembro - Anual'
@@ -60,7 +60,7 @@ export default function Atividades() {
                           width={100}
                           height={60}
                           alt={`Voluntários em ação`}
-                          src={"/banner-atividades/Foto1.png"}
+                          src={"/banner-atividades/Foto1.jpg"}
                         />
                       </div>
                     </div>

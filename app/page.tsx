@@ -19,9 +19,9 @@ export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const bannerImages = [
-    "/banner-principal/Foto1.png",
+    "/banner-principal/Foto1.jpg",
     "/banner-principal/Foto2.jpg",
-    "/banner-principal/Foto3.jpg"
+    "/banner-principal/Foto3.jpg",
   ];
 
   useState(() => {
@@ -213,7 +213,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Nossos <span className="text-gradient">Parceiros</span>
+              Nossos <span className="text-gradient">parceiros</span>
             </h2>
             <p className="text-xl text-gray-600">
               Juntos, construímos uma rede de apoio e transformação social
@@ -222,17 +222,28 @@ export default function Home() {
 
           <div className="flex justify-center items-center space-x-8 md:space-x-16">
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="font-bold text-[var(--casa-azul)]">146xFavela</p>
+              <Image
+                width={100}
+                height={60}
+                alt="Logo Casa Reviver Preta"
+                src="/parceiros/146xfavela.jpg"
+              />
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="font-bold text-[var(--casa-laranja)]">
-                CRAC Alimentos
-              </p>
+              <Image
+                width={100}
+                height={60}
+                alt="Logo Casa Reviver Preta"
+                src="/parceiros/CRAC.png"
+              />
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
-              <p className="font-bold text-[var(--casa-roxo)]">
-                Sempre Criança
-              </p>
+              <Image
+                width={100}
+                height={60}
+                alt="Logo Casa Reviver Preta"
+                src="/parceiros/SempreCrianca.png"
+              />
             </div>
           </div>
         </div>
@@ -242,7 +253,7 @@ export default function Home() {
       <section className="py-16 bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Faça Parte Dessa Transformação
+            Faça parte dessa transformação
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Sua ajuda faz a diferença na vida de mais de 200 famílias. Seja
@@ -256,7 +267,7 @@ export default function Home() {
                 size="lg"
                 className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
               >
-                Doar Agora
+                Doar agora
                 <Heart className="ml-2 w-5 h-5" />
               </Button>
             </Link>
@@ -265,7 +276,7 @@ export default function Home() {
                 size="lg"
                 className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
               >
-                Seja Voluntário
+                Seja voluntário
                 <Users className="ml-2 w-5 h-5" />
               </Button>
             </Link>

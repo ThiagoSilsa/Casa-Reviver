@@ -48,7 +48,7 @@ export default function Projetos() {
       nome: "Os Crias",
       descricao:
         "Projeto que orienta jovens para a vida adulta e mapeia demandas do território.",
-      imagem: "/projetos/Foto4.png",
+      imagem: "/projetos/Foto4.jpg",
       icon: Mic,
       cor: "casa-amarelo",
     },
@@ -58,7 +58,7 @@ export default function Projetos() {
       descricao:
         "Espaço de escuta, acolhimento e fortalecimento entre as mulheres da comunidade.",
       imagem:
-        "/projetos/Foto5.png",
+        "/projetos/Foto5.jpg",
       icon: Shield,
       cor: "casa-laranja",
     },
@@ -78,7 +78,7 @@ export default function Projetos() {
       descricao:
         "Economia circular e sustentabilidade: pegar o que precisa e deixar o que não usa mais.",
       imagem:
-        "/projetos/Foto7.png",
+        "/projetos/Foto7.jpg",
       icon: Gift,
       cor: "casa-roxo",
     },
@@ -236,7 +236,7 @@ export default function Projetos() {
       <section className="py-16 bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-amarelo)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Quer Conhecer Nossos Projetos de Perto?
+            Quer conhecer nossos projetos de perto?
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto text-white">
             Venha nos visitar ou seja voluntário em um dos nossos projetos. Sua
@@ -249,7 +249,7 @@ export default function Projetos() {
                 size="lg"
                 className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
               >
-                Doar Agora
+                Doar agora
                 <Heart className="ml-2 w-5 h-5" />
               </Button>
             </Link>
@@ -258,7 +258,7 @@ export default function Projetos() {
                 size="lg"
                 className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
               >
-                Seja Voluntário
+                Seja voluntário
                 <Users className="ml-2 w-5 h-5" />
               </Button>
             </Link>

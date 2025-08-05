@@ -83,7 +83,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-gray-200">
+          <div className="lg:hidden py-4 border-t border-gray-200">
             <nav className="space-y-4">
               {navigationItems.map((item) => (
                 <Link
