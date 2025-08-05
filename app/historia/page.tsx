@@ -121,13 +121,14 @@ export default function Historia() {
               </div>
             </div>
 
-            <div className="relative">
+            <div id="iframe" className="relative">
               <iframe
                 width="560"
                 height="315"
                 src="https://www.youtube.com/embed/nHkbwaDCeOg?si=puPmH0tjAF4N3i7u"
                 title="YouTube video player"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share fullscreen"
+                className="w-full"
               ></iframe>
             </div>
           </div>
@@ -170,6 +171,7 @@ export default function Historia() {
                   </Card>
                 </div>
                 <div className="flex-1">
+                  
                   <img
                     src={etapa.imagem}
                     alt={etapa.titulo}
