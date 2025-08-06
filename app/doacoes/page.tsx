@@ -17,12 +17,12 @@ export default function Doacoes() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-amarelo)] to-[var(--casa-laranja)] text-white py-20">
+      <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900">
-            Como <span className="text-white">Doar</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
+            Como Doar
           </h1>
-          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-gray-800">
+          <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             A Casa Reviver é uma organização sem fins lucrativos e sua doação é 
             essencial para continuarmos nosso trabalho
           </p>
@@ -48,7 +48,7 @@ export default function Doacoes() {
                 
                 <div className="bg-gray-50 border-2 border-dashed border-[var(--casa-laranja)] rounded-lg p-6 mb-6">
                   <p className="text-sm text-gray-600 mb-2">CNPJ da Casa Reviver:</p>
-                  <div className="flex items-center justify-center space-x-4">
+                  <div className="flex-col items-center justify-center space-x-4">
                     <span className="text-2xl font-mono font-bold text-[var(--casa-azul)]">
                       {pixCNPJ}
                     </span>

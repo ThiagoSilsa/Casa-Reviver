@@ -37,10 +37,10 @@ export default function Contato() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-laranja)] text-white py-20">
+     <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Entre em <span className="text-[var(--casa-amarelo)]">contato</span>
+            Entre em contato
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
             Estamos prontos para ouvir você. Tire suas dúvidas, faça sugestões
@@ -52,14 +52,14 @@ export default function Contato() {
       {/* Informações de Contato */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-1 gap-12">
             {/* Informações */}
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Informações de <span className="text-gradient">Contato</span>
               </h2>
 
-              <div className="space-y-6">
+              <div className="space-y-6 grid lg:grid-cols-2 gap-4">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
@@ -142,7 +142,7 @@ export default function Contato() {
             </div>
 
             {/* Formulário de Contato */}
-            <div>
+            {/* <div>
               <Card className="shadow-xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold text-gray-900 flex items-center">
@@ -239,7 +239,7 @@ export default function Contato() {
                   </form>
                 </CardContent>
               </Card>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>

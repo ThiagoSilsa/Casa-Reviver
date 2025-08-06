@@ -11,11 +11,9 @@ import {
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import atividades from "@/data/atividades"
+import atividades from "@/data/atividades";
 
 export default function Atividades() {
-  
-
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -117,7 +115,7 @@ export default function Atividades() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
@@ -126,7 +124,7 @@ export default function Atividades() {
               <p className="text-gray-600">Crianças no Dia das Crianças</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-azul)] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--casa-azul)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
@@ -135,7 +133,7 @@ export default function Atividades() {
               <p className="text-gray-600">Edições Caminhada Laranja</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-roxo)] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--casa-roxo)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Sparkles className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-roxo)] mb-2">
@@ -144,7 +142,7 @@ export default function Atividades() {
               <p className="text-gray-600">Colônias por Ano</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
@@ -219,36 +217,53 @@ export default function Atividades() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-[var(--casa-amarelo)] to-[var(--casa-laranja)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-            Quer Participar das Nossas Atividades?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto text-gray-800">
-            Siga nossas redes sociais e fique por dentro de todas as atividades.
-            Sua participação e voluntariado fazem toda a diferença!
-          </p>
+      {/* Call to Action com imagem */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
+          {/* Seção de imagem - agora com altura fixa em todas as telas */}
+          <div className="order-1 lg:order-2 relative h-64 md:h-80 lg:h-auto">
+            <Image
+              src="/projetos/Foto3.jpg"
+              alt="Pessoas participando dos projetos"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/doacoes">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Doar Agora
-                <Heart className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/seja-voluntario">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Seja Voluntário
-                <Users className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          {/* Seção de texto - cor de fundo */}
+          <div className="bg-[var(--casa-roxo)] p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
+            <div className="h-full flex flex-col justify-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
+                Quer conhecer nossos projetos de perto?
+              </h2>
+              <p className="text-base sm:text-xl mb-6 sm:mb-8 text-white">
+                Venha nos visitar ou seja voluntário em um dos nossos projetos.
+                Sua participação faz toda a diferença!
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link href="/doacoes" className="flex-1">
+                  <Button
+                    size="lg"
+                    className="w-full bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] hover:text-white text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-4"
+                  >
+                    Doar agora
+                    <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </Link>
+                <Link href="/seja-voluntario" className="flex-1">
+                  <Button
+                    size="lg"
+                    className="w-full bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] hover:text-white text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-4"
+                  >
+                    Seja voluntário
+                    <Users className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

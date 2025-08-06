@@ -88,6 +88,7 @@ Roxo-Primário: #893ab8
     - Adicionar fotos em todos os banners; ok
 
 ### Terça-feira:
+
     - Rever página 404; ok
     - Corrigir cards da linha do tempo (Corrigir para mobile apenas); ok
     - Corrigir menu header em tablets;ok
@@ -103,18 +104,35 @@ Roxo-Primário: #893ab8
 
 ### Quarta-feira:
 
-    - Rever formulário e como fazê-lo funcionar;
-    - Colocar foto de ia nos depoimentos;
-    
+    - Corrigir botoes /projetos /atividades; ok
+    - Foto repetida /historia; ok
+    - Botão para form no /voluntario; ok
+    - Melhorar a 404; ok
+    - Corrigir CNPJ da página /doacao; ok
+    - Melhorar banner / doacao; ok
+    - Termos e privacidade ano e amarelo;ok
+    - Melhorar call to action; ok
+    - Adicionar animações igual /home nos icones
+    - Implementar o instagram;
+    - Organizar BackLog por tipo;
     - Ver como ficará para entregar o site;
 
     - Anotar todas as informações que a lia me deve;
         - Horários e local dos projetos;
         - Depoimentos;
 
+### Quinta-feira:
+
 ## Backlog:
+
+    - Corrigir todos os botões bugados no mobile(Banner e call to action)
+    - Call to action tem que pegar de um json, o seja voluntário pega de um link pois isso deve mudar com o tempo.
+    - Rever formulário e como fazê-lo funcionar;
+    - Colocar buttom nos links do header
+    - Clicar fora do menu lateral pra fechar
+    - Ampliar fotos com o clique
+    - Rever altura dos banners
     - Colocar "Site em construção abaixo do header"
-    - Melhorar a 404
     - Bater todos os textos;
     - Rever fonte do layout;
     - Texto em maiúsculo;
@@ -128,3 +146,7 @@ Roxo-Primário: #893ab8
     - Margem geral, linha imaginária
     - Colocar depoimentos em cada projeto
     - Poder abrir as fotos
+
+    - O que a lia deve ver:
+        - Hospedagem,
+        -

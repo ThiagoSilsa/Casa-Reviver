@@ -249,37 +249,53 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Faça parte dessa transformação
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Sua ajuda faz a diferença na vida de mais de 200 famílias. Seja
-            através de doações ou voluntariado, juntos podemos construir um
-            futuro melhor.
-          </p>
+{/* Call to Action com imagem */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
+          {/* Seção de imagem - agora com altura fixa em todas as telas */}
+          <div className="order-1 lg:order-2 relative h-64 md:h-80 lg:h-auto">
+            <Image
+              src="/projetos/Foto1.jpg"
+              alt="Pessoas participando dos projetos"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/doacoes">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Doar agora
-                <Heart className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
-            <Link href="/seja-voluntario">
-              <Button
-                size="lg"
-                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Seja voluntário
-                <Users className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+          {/* Seção de texto - cor de fundo */}
+          <div className="bg-[var(--casa-roxo)] p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
+            <div className="h-full flex flex-col justify-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
+                Quer conhecer nossos projetos de perto?
+              </h2>
+              <p className="text-base sm:text-xl mb-6 sm:mb-8 text-white">
+                Venha nos visitar ou seja voluntário em um dos nossos projetos.
+                Sua participação faz toda a diferença!
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <Link href="/doacoes" className="flex-1">
+                  <Button
+                    size="lg"
+                    className="w-full bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] hover:text-white text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-4"
+                  >
+                    Doar agora
+                    <Heart className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </Link>
+                <Link href="/seja-voluntario" className="flex-1">
+                  <Button
+                    size="lg"
+                    className="w-full bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] hover:text-white text-base sm:text-lg px-4 sm:px-8 py-3 sm:py-4"
+                  >
+                    Seja voluntário
+                    <Users className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+                  </Button>
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

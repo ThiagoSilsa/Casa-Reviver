@@ -80,18 +80,18 @@ export default function SejaVoluntario() {
                 dedicação à comunidade!
               </p>
               <div className="text-left">
-              <Link
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
-                target="_blank"
-              >
-                <Button
-                  size="xl"
-                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                <Link
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
+                  target="_blank"
                 >
-                  Formulário de inscrição
-                  <FileSymlink className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+                  <Button
+                    size="lg"
+                    className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                  >
+                    Formulário de inscrição
+                    <FileSymlink className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
@@ -162,49 +162,64 @@ export default function SejaVoluntario() {
         </div>
       </section>
 
-      {/* Call to Action Final */}
-      <section className="py-16 bg-gradient-to-r from-[var(--casa-laranja)] to-[var(--casa-roxo)] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para Fazer a Diferença?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Junte-se à nossa família de voluntários e ajude a transformar vidas
-            na comunidade. Sua energia, tempo e carinho são fundamentais para
-            nosso trabalho.
-          </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
-              target="_blank"
-            >
-              <Button
-                size="xl"
-                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-              >
-                Formulário de inscrição
-                <FileSymlink className="ml-2 w-5 h-5" />
-              </Button>
-            </Link>
+      {/* Call to Action com imagem */}
+      <section className="relative overflow-hidden">
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
+          {/* Seção de imagem - agora com altura fixa em todas as telas */}
+          <div className="order-1 lg:order-2 relative h-64 md:h-80 lg:h-auto">
+            <Image
+              src="/projetos/Foto7.jpg"
+              alt="Pessoas participando dos projetos"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
           </div>
 
-          <div className="mt-8 text-center">
-            <p className="text-lg py-2">
-              Siga nossas <strong>redes sociais</strong> para ficar por dentro
-              das inscrições!
-            </p>
-            <a
-              href="https://www.instagram.com/casareviver/"
-              target="_blank"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
-            >
-              <Instagram className="w-5 h-5 mr-2" />
-              @casareviver
-            </a>
+          {/* Seção de texto - cor de fundo */}
+          <div className="bg-[var(--casa-roxo)] p-8 sm:p-12 lg:p-16 order-2 lg:order-1 text-white">
+            <div className="h-full flex flex-col justify-center">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">
+                Pronto para Fazer a Diferença?
+              </h2>
+              <p className="text-base sm:text-xl mb-6 sm:mb-8 text-white">
+                Junte-se à nossa família de voluntários e ajude a transformar
+                vidas na comunidade. Sua energia, tempo e carinho são
+                fundamentais para nosso trabalho.
+              </p>
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
+                target="_blank"
+              >
+                <Button
+                  size="lg"
+                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                >
+                  Formulário de inscrição
+                  <FileSymlink className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+              <p className="text-lg py-2">
+                Siga nossas <strong>redes sociais</strong> para ficar por dentro
+                das inscrições!
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                <a
+                  href="https://www.instagram.com/casareviver/"
+                  target="_blank"
+                  className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+                >
+                  <Instagram className="w-5 h-5 mr-2" />
+                  @casareviver
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
+
       {/* Oportunidades de Voluntariado */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

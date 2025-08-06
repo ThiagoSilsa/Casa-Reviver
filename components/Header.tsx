@@ -66,7 +66,7 @@ const Header = () => {
             </Link>
             <Link
               href="/doacoes"
-              className="px-4 py-2 text-sm font-medium text-white bg-[var(--casa-laranja)] rounded-md hover:bg-[var(--casa-azul)] transition-colors "
+              className="px-4 py-2 text-sm font-medium text-white bg-[var(--casa-laranja)] rounded-md hover:text-[var(--casa-laranja)] hover:bg-white border-2 transition-colors"
             >
               Doar Agora
             </Link>
