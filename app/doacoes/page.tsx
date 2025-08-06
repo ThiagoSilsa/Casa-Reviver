@@ -64,37 +64,7 @@ export default function Doacoes() {
                   </div>
                 </div>
                 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                  <Button 
-                    className="bg-[var(--casa-azul)] hover:bg-[var(--casa-azul)]/90 text-white h-12"
-                    onClick={() => alert('Redirecionando para PIX com valor R$ 10,00')}
-                  >
-                    R$ 10
-                  </Button>
-                  <Button 
-                    className="bg-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)]/90 text-white h-12"
-                    onClick={() => alert('Redirecionando para PIX com valor R$ 25,00')}
-                  >
-                    R$ 25
-                  </Button>
-                  <Button 
-                    className="bg-[var(--casa-roxo)] hover:bg-[var(--casa-roxo)]/90 text-white h-12"
-                    onClick={() => alert('Redirecionando para PIX com valor R$ 50,00')}
-                  >
-                    R$ 50
-                  </Button>
-                  <Button 
-                    className="bg-[var(--casa-amarelo)] hover:bg-[var(--casa-amarelo)]/90 text-gray-900 h-12"
-                    onClick={() => alert('Redirecionando para PIX com valor R$ 100,00')}
-                  >
-                    R$ 100
-                  </Button>
                 </div>
-                
-                <p className="text-gray-600">
-                  Ou escolha o valor que desejar ao fazer a transferência PIX
-                </p>
-              </div>
             </CardContent>
           </Card>
         </div>

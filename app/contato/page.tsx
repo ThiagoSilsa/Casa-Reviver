@@ -1,35 +1,37 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import { Label } from '@/components/ui/label';
+import { useState } from "react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 
 export default function Contato() {
   const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    assunto: '',
-    mensagem: ''
+    nome: "",
+    email: "",
+    assunto: "",
+    mensagem: "",
   });
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Aqui você implementaria o envio do email
-    console.log('Formulário enviado:', formData);
-    alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
-    setFormData({ nome: '', email: '', assunto: '', mensagem: '' });
+    console.log("Formulário enviado:", formData);
+    alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+    setFormData({ nome: "", email: "", assunto: "", mensagem: "" });
   };
 
   return (
@@ -41,7 +43,8 @@ export default function Contato() {
             Entre em <span className="text-[var(--casa-amarelo)]">contato</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
-            Estamos prontos para ouvir você. Tire suas dúvidas, faça sugestões ou venha nos conhecer!
+            Estamos prontos para ouvir você. Tire suas dúvidas, faça sugestões
+            ou venha nos conhecer!
           </p>
         </div>
       </section>
@@ -55,7 +58,7 @@ export default function Contato() {
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
                 Informações de <span className="text-gradient">Contato</span>
               </h2>
-              
+
               <div className="space-y-6">
                 <Card className="hover:shadow-lg transition-shadow">
                   <CardContent className="p-6">
@@ -64,9 +67,12 @@ export default function Contato() {
                         <MapPin className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Endereço</h3>
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                          Endereço
+                        </h3>
                         <p className="text-gray-600">
-                          Rua Padre Anchieta, 168<br />
+                          Rua Padre Anchieta, 168
+                          <br />
                           Centro - Niterói/RJ
                         </p>
                       </div>
@@ -81,9 +87,12 @@ export default function Contato() {
                         <Phone className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Telefone</h3>
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                          Telefone
+                        </h3>
                         <p className="text-gray-600">
-                          (21) 99999-9999<br />
+                          (21) 99999-9999
+                          <br />
                           WhatsApp disponível
                         </p>
                       </div>
@@ -98,10 +107,12 @@ export default function Contato() {
                         <Mail className="w-6 h-6 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">E-mail</h3>
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                          E-mail
+                        </h3>
                         <p className="text-gray-600">
-                          contato@casareviver.org<br />
-                          Respondemos em até 24 horas
+                          contato@casareviver.org
+                          <br />
                         </p>
                       </div>
                     </div>
@@ -115,7 +126,9 @@ export default function Contato() {
                         <Clock className="w-6 h-6 text-gray-900" />
                       </div>
                       <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">Funcionamento</h3>
+                        <h3 className="text-lg font-bold text-gray-900 mb-2">
+                          Funcionamento
+                        </h3>
                         <div className="text-gray-600">
                           <p>Segunda a Sexta: 8h às 17h</p>
                           <p>Sábado: 8h às 12h</p>
@@ -140,7 +153,10 @@ export default function Contato() {
                 <CardContent className="p-8">
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Label htmlFor="nome" className="text-sm font-medium text-gray-700">
+                      <Label
+                        htmlFor="nome"
+                        className="text-sm font-medium text-gray-700"
+                      >
                         Nome Completo *
                       </Label>
                       <Input
@@ -156,7 +172,10 @@ export default function Contato() {
                     </div>
 
                     <div>
-                      <Label htmlFor="email" className="text-sm font-medium text-gray-700">
+                      <Label
+                        htmlFor="email"
+                        className="text-sm font-medium text-gray-700"
+                      >
                         E-mail *
                       </Label>
                       <Input
@@ -172,7 +191,10 @@ export default function Contato() {
                     </div>
 
                     <div>
-                      <Label htmlFor="assunto" className="text-sm font-medium text-gray-700">
+                      <Label
+                        htmlFor="assunto"
+                        className="text-sm font-medium text-gray-700"
+                      >
                         Assunto *
                       </Label>
                       <Input
@@ -188,7 +210,10 @@ export default function Contato() {
                     </div>
 
                     <div>
-                      <Label htmlFor="mensagem" className="text-sm font-medium text-gray-700">
+                      <Label
+                        htmlFor="mensagem"
+                        className="text-sm font-medium text-gray-700"
+                      >
                         Mensagem *
                       </Label>
                       <Textarea
@@ -203,8 +228,8 @@ export default function Contato() {
                       />
                     </div>
 
-                    <Button 
-                      type="submit" 
+                    <Button
+                      type="submit"
                       size="lg"
                       className="w-full bg-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)]/90 text-white text-lg py-3"
                     >
@@ -227,10 +252,11 @@ export default function Contato() {
               Pontos de <span className="text-gradient">Coleta</span>
             </h2>
             <p className="text-xl text-gray-600">
-              Locais onde você pode deixar suas doações de livros, roupas e alimentos
+              Locais onde você pode deixar suas doações de livros, roupas e
+              alimentos
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
@@ -243,9 +269,7 @@ export default function Contato() {
                 <p className="text-gray-700 font-medium mb-2">
                   Rua Belisário Augusto, 91
                 </p>
-                <p className="text-gray-600">
-                  Aos cuidados de Lia Castanho
-                </p>
+                <p className="text-gray-600">Aos cuidados de Lia Castanho</p>
                 <div className="mt-4 text-sm text-gray-500">
                   <p>• Livros para biblioteca</p>
                   <p>• Roupas para Varal Solidário</p>
@@ -265,9 +289,7 @@ export default function Contato() {
                 <p className="text-gray-700 font-medium mb-2">
                   Rua Padre Anchieta, 168
                 </p>
-                <p className="text-gray-600">
-                  Casa Reviver - Sede
-                </p>
+                <p className="text-gray-600">Casa Reviver - Sede</p>
                 <div className="mt-4 text-sm text-gray-500">
                   <p>• Livros para biblioteca</p>
                   <p>• Roupas para Varal Solidário</p>
@@ -276,10 +298,11 @@ export default function Contato() {
               </CardContent>
             </Card>
           </div>
-          
+
           <div className="text-center mt-8">
             <p className="text-lg text-gray-600">
-              <strong>Toda ajuda faz diferença.</strong> Obrigada por caminhar com a gente.
+              <strong>Toda ajuda faz diferença.</strong> Obrigada por caminhar
+              com a gente.
             </p>
           </div>
         </div>
@@ -293,20 +316,21 @@ export default function Contato() {
               Nossa <span className="text-gradient">Localização</span>
             </h2>
           </div>
-          
-          <div className="bg-gray-200 h-96 rounded-lg flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-[var(--casa-laranja)] mx-auto mb-4" />
-              <p className="text-xl font-bold text-gray-700">Casa Reviver</p>
-              <p className="text-gray-600">Rua Padre Anchieta, 168 - Centro, Niterói</p>
-              <Button 
-                className="mt-4 bg-[var(--casa-azul)] hover:bg-[var(--casa-azul)]/90 text-white"
-                onClick={() => window.open('https://maps.google.com', '_blank')}
-              >
-                Ver no Google Maps
-              </Button>
-            </div>
-          </div>
+
+          <MapPin className="w-16 h-16 text-[var(--casa-laranja)] mx-auto mb-4" />
+          <p className="text-xl font-bold text-gray-700 text-center">
+            Casa Reviver
+          </p>
+          <p className="text-gray-600 text-center py-4">
+            Rua Padre Anchieta, 168 - Centro, Niterói
+          </p>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.4430373415153!2d-43.119765!3d-22.8970242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9983c332da8f2d%3A0xf9b688d1af0bee49!2sR.%20Padre%20Anchieta%2C%20168%20-%20S%C3%A3o%20Domingos%2C%20Niter%C3%B3i%20-%20RJ%2C%2024210-050!5e0!3m2!1spt-BR!2sbr!4v1754437959064!5m2!1spt-BR!2sbr"
+            width="600"
+            height="450"
+            loading="lazy"
+            className="w-full "
+          ></iframe>
         </div>
       </section>
     </div>

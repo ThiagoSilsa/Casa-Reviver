@@ -45,10 +45,10 @@ export default function Historia() {
   ];
 
   const fotosCarrossel = [
-    "https://images.pexels.com/photos/1001914/pexels-photo-1001914.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1516440/pexels-photo-1516440.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/3985163/pexels-photo-3985163.jpeg?auto=compress&cs=tinysrgb&w=800",
-    "https://images.pexels.com/photos/1153213/pexels-photo-1153213.jpeg?auto=compress&cs=tinysrgb&w=800",
+    "/atividades/Foto1.jpg",
+    "/projetos/roda-guerreiras/Foto2.jpg",
+    "/projetos/Foto2.jpg",
+    "/projetos/Foto8.jpg",
   ];
 
   return (

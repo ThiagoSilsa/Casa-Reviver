@@ -254,7 +254,7 @@ export default function SejaVoluntario() {
                   <Heart className="ml-2 w-5 h-5" />
                 </Button>
               </Link>
-              <Link href="/seja-voluntario">
+              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform" target='_blank'>
                 <Button
                   size="lg"
                   className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"

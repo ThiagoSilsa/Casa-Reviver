@@ -95,23 +95,25 @@ Roxo-Primário: #893ab8
     - Favicon; ok
     - Refatorar fotos(Resize/Direcionamento); ok
     - Rotas para atividades e projetos (Iguais);  ok
-    - Colocar "Site em construção abaixo do header"
-    - Refazer vídeo do /historia;
-    - Mapa;
-    - Rever formulário e como fazê-lo funcionar;
-    - /doacoes (Ver como ficará o pix), pegar algum site de exemplo;
+    - Refazer vídeo do /historia; ok
+    - /doacoes (Ver como ficará o pix), pegar algum site de exemplo; ok
+    - Mapa; ok
+    - Link para form seja voluntário; ok
+    - Momentos especiais Colocar mais fotos carrossel, ou tirar isso!; ok
 
 ### Quarta-feira:
 
-    - Link para form seja voluntário;
+    - Rever formulário e como fazê-lo funcionar;
     - Colocar foto de ia nos depoimentos;
+    
     - Ver como ficará para entregar o site;
-    - Momentos especiais Colocar mais fotos carrossel, ou tirar isso!;
+
     - Anotar todas as informações que a lia me deve;
         - Horários e local dos projetos;
         - Depoimentos;
 
 ## Backlog:
+    - Colocar "Site em construção abaixo do header"
     - Melhorar a 404
     - Bater todos os textos;
     - Rever fonte do layout;
@@ -125,3 +127,4 @@ Roxo-Primário: #893ab8
     - Passar todas as imgs para <Image/>
     - Margem geral, linha imaginária
     - Colocar depoimentos em cada projeto
+    - Poder abrir as fotos
