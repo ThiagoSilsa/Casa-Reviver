@@ -149,7 +149,7 @@ export default function ProjetoPage() {
                       className="w-full bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white"
                     >
                       <Users className="mr-2" />
-                      Faça uma doação
+                      Seja voluntário
                     </Button>
                   </Link>
                 </div>

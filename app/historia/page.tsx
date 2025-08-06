@@ -46,7 +46,7 @@ export default function Historia() {
 
   const fotosCarrossel = [
     "/atividades/Foto1.jpg",
-    "/projetos/roda-guerreiras/Foto2.jpg",
+    "/banner-voluntario/Foto1.jpg",
     "/projetos/Foto2.jpg",
     "/projetos/Foto8.jpg",
   ];

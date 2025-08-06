@@ -1,75 +1,102 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Heart, Users, Calendar, BookOpen, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import Link from 'next/link';
-import Image from 'next/image';
+import { useState } from "react";
+import {
+  Heart,
+  Users,
+  Calendar,
+  BookOpen,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  FileSymlink,
+  Instagram,
+} from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function SejaVoluntario() {
-
   const oportunidades = [
     {
-      titulo: 'Atividades Socioeducativas',
-      descricao: 'Ajude no desenvolvimento das crianças através de atividades lúdicas e educativas.',
+      titulo: "Atividades Socioeducativas",
+      descricao:
+        "Ajude no desenvolvimento das crianças através de atividades lúdicas e educativas.",
       icon: BookOpen,
-      cor: 'casa-azul'
+      cor: "casa-azul",
     },
     {
-      titulo: 'Projetos Especiais',
-      descricao: 'Participe dos nossos projetos como Ler o Mundo, Os Crias e Roda de Gestante.',
+      titulo: "Projetos Especiais",
+      descricao:
+        "Participe dos nossos projetos como Ler o Mundo, Os Crias e Roda de Gestante.",
       icon: Heart,
-      cor: 'casa-laranja'
+      cor: "casa-laranja",
     },
     {
-      titulo: 'Eventos Anuais',
-      descricao: 'Colabore na organização das nossas grandes festividades e atividades especiais.',
+      titulo: "Eventos Anuais",
+      descricao:
+        "Colabore na organização das nossas grandes festividades e atividades especiais.",
       icon: Calendar,
-      cor: 'casa-roxo'
+      cor: "casa-roxo",
     },
     {
-      titulo: 'Apoio Administrativo',
-      descricao: 'Contribua com habilidades administrativas, comunicação e gestão de projetos.',
+      titulo: "Apoio Administrativo",
+      descricao:
+        "Contribua com habilidades administrativas, comunicação e gestão de projetos.",
       icon: Users,
-      cor: 'casa-amarelo'
-    }
+      cor: "casa-amarelo",
+    },
   ];
-
 
   return (
     <div className="min-h-screen">
       <section className="relative overflow-hidden md:h-96 py-5">
-              <div className="absolute inset-0">
-                <div
-                  key=""
-                  className={`absolute inset-0 transition-opacity duration-1000 "
+        <div className="absolute inset-0">
+          <div
+            key=""
+            className={`absolute inset-0 transition-opacity duration-1000 "
                     }`}
+          >
+            <Image
+              className="w-full h-full object-cover object-[center_70%]"
+              width={100}
+              height={60}
+              alt={`Voluntários em ação`}
+              src={"/banner-voluntario/Foto1.jpg"}
+            />
+          </div>
+        </div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
+          <div className="max-w-4xl px-4">
+            <div id="Textos" className="flex-col">
+              <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
+                Seja{" "}
+                <span className="text-[var(--casa-amarelo)]"> voluntário</span>
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+                Transforme vidas e seja parte da nossa história de amor e
+                dedicação à comunidade!
+              </p>
+              <div className="text-left">
+              <Link
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
+                target="_blank"
+              >
+                <Button
+                  size="xl"
+                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
                 >
-                  <Image
-                    className="w-full h-full object-cover object-[center_70%]"
-                    width={100}
-                    height={60}
-                    alt={`Voluntários em ação`}
-                    src={"/banner-voluntario/Foto1.jpg"}
-                  />
-                </div>
+                  Formulário de inscrição
+                  <FileSymlink className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
               </div>
-              <div className="absolute inset-0 bg-black/60"></div>
-              <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
-                <div className="max-w-4xl px-4">
-                  <div id="Textos" className="flex-col">
-                    <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
-                      Seja <span className="text-[var(--casa-amarelo)]"> voluntário</span>
-                    </h1>
-                <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
-                  Transforme vidas e seja parte da nossa história de amor e dedicação à comunidade!
-                </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-      
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Como se Tornar Voluntário */}
       <section className="py-16 animate-fadeInUp">
@@ -79,21 +106,25 @@ export default function SejaVoluntario() {
               Como se Tornar <span className="text-gradient">Voluntário?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Você pode participar como voluntário, ajudando a construir atividades e colaborando 
-              no dia a dia da Casa Reviver ao lado das nossas equipes especializadas.
+              Você pode participar como voluntário, ajudando a construir
+              atividades e colaborando no dia a dia da Casa Reviver ao lado das
+              nossas equipes especializadas.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-[var(--casa-azul)] rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
                   <CheckCircle className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">1. Escolha sua Frente</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  1. Escolha sua Frente
+                </h3>
                 <p className="text-gray-600">
-                  Escolha uma das nossas frentes de atuação e contribua diretamente 
-                  com o desenvolvimento das crianças e da comunidade.
+                  Escolha uma das nossas frentes de atuação e contribua
+                  diretamente com o desenvolvimento das crianças e da
+                  comunidade.
                 </p>
               </CardContent>
             </Card>
@@ -103,10 +134,12 @@ export default function SejaVoluntario() {
                 <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
                   <Calendar className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">2. Defina sua Disponibilidade</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  2. Defina sua Disponibilidade
+                </h3>
                 <p className="text-gray-600">
-                  Não pode estar com a gente todos os dias? Sem problemas! 
-                  Temos atividades fixas perfeitas para diferentes disponibilidades.
+                  Não pode estar com a gente todos os dias? Sem problemas! Temos
+                  atividades fixas perfeitas para diferentes disponibilidades.
                 </p>
               </CardContent>
             </Card>
@@ -116,9 +149,11 @@ export default function SejaVoluntario() {
                 <div className="w-16 h-16 bg-[var(--casa-roxo)] rounded-full flex items-center justify-center mx-auto mb-6 animate-float">
                   <Sparkles className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">3. Acompanhe as Redes</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  3. Acompanhe as Redes
+                </h3>
                 <p className="text-gray-600">
-                  Sempre avisamos nas redes sociais quando abrimos inscrições 
+                  Sempre avisamos nas redes sociais quando abrimos inscrições
                   para voluntariado. Fique de olho e venha somar com a gente!
                 </p>
               </CardContent>
@@ -127,26 +162,75 @@ export default function SejaVoluntario() {
         </div>
       </section>
 
+      {/* Call to Action Final */}
+      <section className="py-16 bg-gradient-to-r from-[var(--casa-laranja)] to-[var(--casa-roxo)] text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
+            Pronto para Fazer a Diferença?
+          </h2>
+          <p className="text-xl mb-8 max-w-3xl mx-auto">
+            Junte-se à nossa família de voluntários e ajude a transformar vidas
+            na comunidade. Sua energia, tempo e carinho são fundamentais para
+            nosso trabalho.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform"
+              target="_blank"
+            >
+              <Button
+                size="xl"
+                className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+              >
+                Formulário de inscrição
+                <FileSymlink className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-lg py-2">
+              Siga nossas <strong>redes sociais</strong> para ficar por dentro
+              das inscrições!
+            </p>
+            <a
+              href="https://www.instagram.com/casareviver/"
+              target="_blank"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-lg hover:from-purple-700 hover:to-pink-700 transition-colors"
+            >
+              <Instagram className="w-5 h-5 mr-2" />
+              @casareviver
+            </a>
+          </div>
+        </div>
+      </section>
       {/* Oportunidades de Voluntariado */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Oportunidades de <span className="text-gradient">Voluntariado</span>
+              Oportunidades de{" "}
+              <span className="text-gradient">Voluntariado</span>
             </h2>
             <p className="text-xl text-gray-600">
               Encontre a área que mais combina com você e suas habilidades
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {oportunidades.map((oportunidade, index) => {
               const IconComponent = oportunidade.icon;
               return (
-                <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                <Card
+                  key={index}
+                  className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+                >
                   <CardHeader className="pb-4">
                     <div className="flex items-center space-x-4">
-                      <div className={`w-12 h-12 bg-[var(--${oportunidade.cor})] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform`}>
+                      <div
+                        className={`w-12 h-12 bg-[var(--${oportunidade.cor})] rounded-full flex items-center justify-center group-hover:scale-110 transition-transform`}
+                      >
                         <IconComponent className="w-6 h-6 text-white" />
                       </div>
                       <CardTitle className="text-xl font-bold text-gray-900 group-hover:text-[var(--casa-laranja)] transition-colors">
@@ -155,9 +239,7 @@ export default function SejaVoluntario() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">
-                      {oportunidade.descricao}
-                    </p>
+                    <p className="text-gray-600">{oportunidade.descricao}</p>
                   </CardContent>
                 </Card>
               );
@@ -174,7 +256,7 @@ export default function SejaVoluntario() {
               Depoimentos de <span className="text-gradient">voluntários</span>
             </h2>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="hover:shadow-lg transition-shadow">
               <CardContent className="p-8">
@@ -184,12 +266,15 @@ export default function SejaVoluntario() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Maria Silva</h4>
-                    <p className="text-sm text-gray-600">Voluntária há 2 anos</p>
+                    <p className="text-sm text-gray-600">
+                      Voluntária há 2 anos
+                    </p>
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  "Ser voluntária na Casa Reviver transformou minha vida. Ver o sorriso das crianças 
-                  e saber que estou fazendo diferença na comunidade não tem preço."
+                  "Ser voluntária na Casa Reviver transformou minha vida. Ver o
+                  sorriso das crianças e saber que estou fazendo diferença na
+                  comunidade não tem preço."
                 </p>
               </CardContent>
             </Card>
@@ -206,8 +291,9 @@ export default function SejaVoluntario() {
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  "A Casa Reviver me ensinou o verdadeiro significado de comunidade. 
-                  Aqui, todos colaboram para construir um futuro melhor juntos."
+                  "A Casa Reviver me ensinou o verdadeiro significado de
+                  comunidade. Aqui, todos colaboram para construir um futuro
+                  melhor juntos."
                 </p>
               </CardContent>
             </Card>
@@ -220,55 +306,18 @@ export default function SejaVoluntario() {
                   </div>
                   <div>
                     <h4 className="font-bold text-gray-900">Ana Costa</h4>
-                    <p className="text-sm text-gray-600">Voluntária há 3 anos</p>
+                    <p className="text-sm text-gray-600">
+                      Voluntária há 3 anos
+                    </p>
                   </div>
                 </div>
                 <p className="text-gray-600 italic">
-                  "Cada dia como voluntária é uma oportunidade de aprender e crescer. 
-                  As crianças me ensinam tanto quanto eu ensino a elas."
+                  "Cada dia como voluntária é uma oportunidade de aprender e
+                  crescer. As crianças me ensinam tanto quanto eu ensino a
+                  elas."
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action Final */}
-      <section className="py-16 bg-gradient-to-r from-[var(--casa-laranja)] to-[var(--casa-roxo)] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pronto para Fazer a Diferença?
-          </h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Junte-se à nossa família de voluntários e ajude a transformar vidas na comunidade. 
-            Sua energia, tempo e carinho são fundamentais para nosso trabalho.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/doacoes">
-                <Button
-                  size="lg"
-                  className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
-                >
-                  Doar Agora
-                  <Heart className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link href="https://docs.google.com/forms/d/e/1FAIpQLSeIllBTC8j-ybDOWFeg8xCJJh6Fh_5xuIj62tWdTB7jqR67wg/viewform" target='_blank'>
-                <Button
-                  size="lg"
-                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-                >
-                  Seja Voluntário
-                  <Users className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-          </div>
-          
-          <div className="mt-8 text-center">
-            <p className="text-lg">
-              Siga nossas <strong>redes sociais</strong> para ficar por dentro das inscrições!
-            </p>
           </div>
         </div>
       </section>

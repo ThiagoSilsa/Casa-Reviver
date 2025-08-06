@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[var(--casa-amarelo)] via-[var(--casa-laranja)] to-[var(--casa-azul)] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-[var(--casa-laranja)] to-[var(--casa-azul)] flex items-center justify-center px-4">
       <div className="text-center text-white">
         <div className="mb-8">
           <h1 className="text-9xl font-bold mb-4 text-white/90">404</h1>
@@ -22,7 +22,8 @@ export default function NotFound() {
           <Link href="/">
             <Button 
               size="lg" 
-              className="bg-white text-[var(--casa-azul)] hover:bg-gray-100 text-lg px-8 py-4"
+              variant="outline" 
+              className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] hover:text-white text-lg px-8 py-4"
             >
               <Home className="mr-2 w-5 h-5" />
               Voltar ao Início
@@ -31,7 +32,7 @@ export default function NotFound() {
           <Button 
             size="lg" 
             variant="outline" 
-            className="bg-white text-[var(--casa-azul)] hover:bg-gray-100 text-lg px-8 py-4"
+            className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] hover:text-white text-lg px-8 py-4"
             onClick={() => window.history.back()}
           >
             <ArrowLeft className="mr-2 w-5 h-5" />

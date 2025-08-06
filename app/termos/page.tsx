@@ -8,7 +8,7 @@ export default function Termos() {
       <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Termos de <span className="text-[var(--casa-amarelo)]">Uso</span>
+            Termos de Uso
           </h1>
           <p className="text-xl">
             Condições de uso do site da Casa Reviver
@@ -81,8 +81,8 @@ export default function Termos() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center text-xl text-[var(--casa-amarelo)]">
-                  <AlertCircle className="w-6 h-6 mr-3 text-gray-900" />
+                <CardTitle className="flex items-center text-xl text-[var(--casa-laranja)]">
+                  <AlertCircle className="w-6 h-6 mr-3" />
                   4. Responsabilidades do Usuário
                 </CardTitle>
               </CardHeader>
@@ -157,8 +157,8 @@ export default function Termos() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center text-xl text-[var(--casa-amarelo)]">
-                  <FileText className="w-6 h-6 mr-3 text-gray-900" />
+                <CardTitle className="flex items-center text-xl text-[var(--casa-laranja)]">
+                  <FileText className="w-6 h-6 mr-3 " />
                   8. Contato
                 </CardTitle>
               </CardHeader>
@@ -178,7 +178,7 @@ export default function Termos() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600">
-              <strong>Última atualização:</strong> Janeiro de 2024
+              <strong>Última atualização:</strong> Julho de 2025
             </p>
             <p className="text-sm text-gray-500 mt-2">
               CNPJ: 02.392.823/0001-35

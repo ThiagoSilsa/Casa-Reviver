@@ -5,12 +5,12 @@ export default function Privacidade() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[var(--casa-laranja)] to-[var(--casa-amarelo)] text-white py-16">
+      <section className="bg-gradient-to-r from-[var(--casa-azul)] to-[var(--casa-roxo)] text-white py-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-            Política de <span className="text-white">Privacidade</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+            Política de Privacidade
           </h1>
-          <p className="text-xl text-gray-800">
+          <p className="text-xl text-white">
             Como protegemos e utilizamos suas informações pessoais
           </p>
         </div>
@@ -85,8 +85,8 @@ export default function Privacidade() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center text-xl text-[var(--casa-amarelo)]">
-                  <Shield className="w-6 h-6 mr-3 text-gray-900" />
+                <CardTitle className="flex items-center text-xl text-[var(--casa-laranja)]">
+                  <Shield className="w-6 h-6 mr-3 " />
                   4. Compartilhamento de Informações
                 </CardTitle>
               </CardHeader>
@@ -174,8 +174,8 @@ export default function Privacidade() {
 
             <Card>
               <CardHeader>
-                <CardTitle className="flex items-center text-xl text-[var(--casa-amarelo)]">
-                  <FileText className="w-6 h-6 mr-3 text-gray-900" />
+                <CardTitle className="flex items-center text-xl text-[var(--casa-laranja)]">
+                  <FileText className="w-6 h-6 mr-3" />
                   8. Alterações nesta Política
                 </CardTitle>
               </CardHeader>
@@ -218,7 +218,7 @@ export default function Privacidade() {
 
           <div className="mt-12 text-center">
             <p className="text-gray-600">
-              <strong>Última atualização:</strong> Janeiro de 2024
+              <strong>Última atualização:</strong> Julho de 2025
             </p>
             <p className="text-sm text-gray-500 mt-2">
               Esta política está em conformidade com a Lei Geral de Proteção de Dados (LGPD)

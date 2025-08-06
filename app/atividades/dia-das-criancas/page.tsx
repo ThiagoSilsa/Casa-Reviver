@@ -7,7 +7,7 @@ import atividades from "@/data/atividades";
 // Dados dos projetos (pode ser movido para um arquivo externo depois)
 
 export default function ProjetoPage() {
-  const projeto = atividades[3];
+  const projeto = atividades[2];
 
   if (!projeto) {
     return <div>Atividade não encontrado</div>;
@@ -149,7 +149,7 @@ export default function ProjetoPage() {
                       className="w-full bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white"
                     >
                       <Users className="mr-2" />
-                      Faça uma doação
+                      Seja voluntário
                     </Button>
                   </Link>
                 </div>
