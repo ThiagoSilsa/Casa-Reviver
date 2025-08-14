@@ -2,6 +2,7 @@ import Link from "next/link";
 import { ArrowLeft, Heart, Users, Calendar, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import proejtos from "@/data/projetos";
 import projetos from "@/data/projetos";
 
 // Dados dos projetos (pode ser movido para um arquivo externo depois)
@@ -17,40 +18,45 @@ export default function ProjetoPage() {
     <div className="min-h-screen w-full">
       {/* Cabeçalho com imagem de fundo */}
       <section className="relative h-64 md:h-96 overflow-hidden">
+        {/* Imagem de fundo */}
         <Image
           src={projeto.imagemCapa}
           alt={`Capa do projeto ${projeto.nome}`}
           fill
-          className="object-cover object-[center_45%]"
+          className="object-cover object-[center_65%]"
           priority
         />
         <div className="absolute inset-0 bg-black/70"></div>
-        <div className="container relative h-full flex items-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <Link href="/projetos">
-              <Button
-                variant="outline"
-                className="mb-6 bg-transparent text-white hover:bg-white hover:text-[var(--casa-laranja)]"
-              >
-                <ArrowLeft className="mr-2" />
-                Voltar para projetos
-              </Button>
-            </Link>
-            <h1 className="text-3xl md:text-5xl font-bold text-white">
-              {projeto.nome}
-            </h1>
+
+        {/* Conteúdo */}
+        <div className="relative h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="flex flex-col py-6">
+              <Link href="/projetos">
+                <Button
+                  variant="outline"
+                  className="mb-6 bg-transparent text-white hover:bg-white hover:text-[var(--casa-laranja)]"
+                >
+                  <ArrowLeft className="mr-2" />
+                  Voltar para projetos
+                </Button>
+              </Link>
+              <h1 className="text-3xl md:text-5xl font-bold text-white">
+                {projeto.nome}
+              </h1>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Conteúdo principal */}
-      <section className="py-12 w-full px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-12">
+<section className="py-16 w-full">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="grid md:grid-cols-3 gap-12 items-start">
             {/* Coluna principal */}
             <div className="md:col-span-2">
               <h2 className="text-2xl font-bold mb-6 text-[var(--casa-azul)]">
-                Sobre o Projeto
+                Sobre o projeto
               </h2>
               <p className="text-lg leading-relaxed mb-8 whitespace-pre-line text-justify">
                 {projeto.descricaoLonga}
@@ -61,7 +67,7 @@ export default function ProjetoPage() {
                 id="Momentos"
                 className="text-xl font-bold mb-6 text-[var(--casa-laranja)]"
               >
-                Momentos do Projeto
+                Momentos do projeto
               </h3>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
                 {projeto.imagensGaleria.map((imagem, index) => (
@@ -121,7 +127,7 @@ export default function ProjetoPage() {
                   <div className="flex items-start gap-4">
                     <Clock className="w-6 h-6 text-[var(--casa-azul)] mt-1" />
                     <div>
-                      <h4 className="font-bold">Horário</h4>
+                      <h4 className="font-bold">Período</h4>
                       <p>{projeto.detalhes.horario}</p>
                     </div>
                   </div>

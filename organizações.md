@@ -75,7 +75,7 @@ Roxo-Primário: #893ab8
 
 ## Por dia:
 
-### Segunda-feira:
+### Segunda-feira 0408
 
     - Corrigir banner /seja-voluntário ok
     - Corrigir banner /doacoes; ok
@@ -87,7 +87,7 @@ Roxo-Primário: #893ab8
     - Banner um pouco mais escuro; ok
     - Adicionar fotos em todos os banners; ok
 
-### Terça-feira:
+### Terça-feira 0508
 
     - Rever página 404; ok
     - Corrigir cards da linha do tempo (Corrigir para mobile apenas); ok
@@ -102,7 +102,7 @@ Roxo-Primário: #893ab8
     - Link para form seja voluntário; ok
     - Momentos especiais Colocar mais fotos carrossel, ou tirar isso!; ok
 
-### Quarta-feira:
+### Quarta-feira 0608
 
     - Corrigir botoes /projetos /atividades; ok
     - Foto repetida /historia; ok
@@ -121,18 +121,27 @@ Roxo-Primário: #893ab8
         - Horários e local dos projetos;
         - Depoimentos;
 
-### Quinta-feira:
+###  Quinta 1408
+    - Linha imaginária; "ok"
+    - Animações; ok
+        - Corrigir animações de surgir;ok
+        - Adicionar animações de aumentar os números; ok
+    - Ampliar fotos com o clique
+    - Colocar "Site em construção abaixo do header"
+        - Deve ser uma constante que irá mudar isso, true ou false; 0 ou 1; 
+    - Instagram
+
+
+
 
 ## Backlog:
 
+    - Colocar buttom nos links do header;
     - Corrigir todos os botões bugados no mobile(Banner e call to action)
-    - Call to action tem que pegar de um json, o seja voluntário pega de um link pois isso deve mudar com o tempo.
+    - Call to action tem que pegar de um json, ou seja voluntário pega de um link pois isso deve mudar com o tempo.
     - Rever formulário e como fazê-lo funcionar;
-    - Colocar buttom nos links do header
     - Clicar fora do menu lateral pra fechar
-    - Ampliar fotos com o clique
     - Rever altura dos banners
-    - Colocar "Site em construção abaixo do header"
     - Bater todos os textos;
     - Rever fonte do layout;
     - Texto em maiúsculo;
@@ -146,7 +155,17 @@ Roxo-Primário: #893ab8
     - Margem geral, linha imaginária
     - Colocar depoimentos em cada projeto
     - Poder abrir as fotos
+    - Melhorar SEO da página
+    - Hospedagem
 
     - O que a lia deve ver:
+        - Horarios e locais dos projetos e atividades;
+        - Verificação de bugs;
+        - Confirmar informações dos cards flutuantes;
+        - Whatsapp, e-mail... 
+        - Dados ilustrativos;
+    
+    - Próximos passos:
         - Hospedagem,
-        -
+        - Formulário de contato;
+        - Instagram adaptativo;

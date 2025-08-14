@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import atividades from "@/data/atividades";
+import Counter from "@/components/Counter";
 
 export default function Atividades() {
   return (
@@ -35,13 +36,13 @@ export default function Atividades() {
         </div>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
-          <div className="max-w-4xl px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div id="Textos" className="flex-col">
               <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
                 Nossas{" "}
                 <span className="text-[var(--casa-amarelo)]"> atividades</span>
               </h1>
-              <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto text-left">
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl text-left">
                 4 atividades fixas anuais abertas para toda comunidade e cidade.
               </p>
             </div>
@@ -119,7 +120,7 @@ export default function Atividades() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
-                500+
+                <Counter end={500} />+
               </h3>
               <p className="text-gray-600">Crianças no Dia das Crianças</p>
             </div>
@@ -128,7 +129,7 @@ export default function Atividades() {
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
-                6
+                <Counter end={6} />+
               </h3>
               <p className="text-gray-600">Edições Caminhada Laranja</p>
             </div>
@@ -146,7 +147,7 @@ export default function Atividades() {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
-                10
+                <Counter end={10} />+
               </h3>
               <p className="text-gray-600">Anos de Festa de Natal</p>
             </div>
@@ -233,8 +234,8 @@ export default function Atividades() {
           </div>
 
           {/* Seção de texto - cor de fundo */}
-          <div className="bg-[var(--casa-roxo)] p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
-            <div className="h-full flex flex-col justify-center">
+          <div className="bg-[var(--casa-roxo)] py-10 order-2 lg:order-1 px-4">
+            <div className="h-full flex flex-col justify-center w-full lg:pl-24 md:pl-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
                 Quer conhecer nossos projetos de perto?
               </h2>

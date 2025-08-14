@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -14,6 +15,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import projetos from "@/data/projetos";
+import Counter from "@/components/Counter";
 
 export default function Projetos() {
   return (
@@ -33,13 +35,13 @@ export default function Projetos() {
         </div>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div id="Textos" className="flex-col">
               <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
                 Nossos{" "}
                 <span className="text-[var(--casa-amarelo)]"> projetos</span>
               </h1>
-              <p className="text-sm md:text-2xl mb-8 max-w-2xl mx-auto text-left">
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl text-left">
                 8 projetos transformando vidas e construindo um futuro melhor
                 para nossa comunidade.
               </p>
@@ -115,7 +117,7 @@ export default function Projetos() {
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
-                200+
+                <Counter end={200} />+
               </h3>
               <p className="text-gray-600">Pessoas Atendidas</p>
             </div>
@@ -124,7 +126,7 @@ export default function Projetos() {
                 <BookOpen className="w-8 h-8 text-white " />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
-                8
+                <Counter end={8} />+
               </h3>
               <p className="text-gray-600">Projetos Ativos</p>
             </div>
@@ -133,7 +135,7 @@ export default function Projetos() {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-roxo)] mb-2">
-                365
+                <Counter end={365} />+
               </h3>
               <p className="text-gray-600">Dias por Ano</p>
             </div>

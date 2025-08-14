@@ -71,13 +71,13 @@ export default function Historia() {
         </div>
         <div className="absolute inset-0 bg-black/70"></div>
         <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
-          <div className="max-w-4xl px-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
             <div id="Textos" className="flex-col">
               <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp text-left">
                 Nossa{" "}
                 <span className="text-[var(--casa-amarelo)]"> história</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto text-left">
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl text-left">
                 19 anos de transformação, resistência e amor pela comunidade.
               </p>
             </div>

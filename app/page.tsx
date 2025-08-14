@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 
 import Link from "next/link";
@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+
+import Counter from "@/components/Counter";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -32,9 +34,9 @@ export default function Home() {
   });
 
   return (
-    <div className="min-h-screen ">
+    <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative overflow-hidden md:h-96 py-5">
+      <section className="relative overflow-hidden md:h-96 ">
         <div className="absolute inset-0">
           {bannerImages.map((image, index) => (
             <div
@@ -54,40 +56,43 @@ export default function Home() {
           ))}
         </div>
         <div className="absolute inset-0 bg-black/70"></div>
-        <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start">
-          <div className="max-w-4xl px-4">
-            <div id="Textos" className="flex-col">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp text-left">
+
+        {/* Container de conteúdo */}
+        <div className="relative h-full flex items-center text-white animate-fadeInUp">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="flex flex-col py-8">
+              {/* <-- Espaçamento vertical */}
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 text-left">
                 Transformando vidas na
                 <span className="block text-[var(--casa-amarelo)]">
                   comunidade
                 </span>
               </h1>
-              <p className="text-sm md:text-2xl mb-8 max-w-3xl mx-auto animate-fadeInUp text-left">
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl text-left">
                 Desde 2006, a Casa Reviver atende mais de 200 famílias no Morro
                 do Estado com atividades socioeducativas, apoio psicológico e
                 desenvolvimento social.
               </p>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-left animate-fadeInUp">
-              <Link href="/doacoes">
-                <Button
-                  size="lg"
-                  className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
-                >
-                  Doar Agora
-                  <Heart className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
-              <Link href="/seja-voluntario">
-                <Button
-                  size="lg"
-                  className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
-                >
-                  Seja Voluntário
-                  <Users className="ml-2 w-5 h-5" />
-                </Button>
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-left">
+                <Link href="/doacoes">
+                  <Button
+                    size="lg"
+                    className="bg-white text-[var(--casa-laranja)] hover:bg-[var(--casa-laranja)] shadow-md hover:text-white text-lg px-8 py-4"
+                  >
+                    Doar Agora
+                    <Heart className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+                <Link href="/seja-voluntario">
+                  <Button
+                    size="lg"
+                    className="bg-white text-[var(--casa-azul)] hover:bg-[var(--casa-azul)] shadow-md hover:text-white text-lg px-8 py-4"
+                  >
+                    Seja Voluntário
+                    <Users className="ml-2 w-5 h-5" />
+                  </Button>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -106,13 +111,16 @@ export default function Home() {
             </p>
           </div>
 
+          
+
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
-                200+
+                <Counter end={200}
+                />+
               </h3>
               <p className="text-gray-600">Famílias atendidas</p>
             </div>
@@ -121,7 +129,7 @@ export default function Home() {
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
-                19
+                <Counter end={19}/>
               </h3>
               <p className="text-gray-600">Anos de história</p>
             </div>
@@ -130,7 +138,7 @@ export default function Home() {
                 <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-roxo)] mb-2">
-                8
+                <Counter end={8}/>
               </h3>
               <p className="text-gray-600">Projetos ativos</p>
             </div>
@@ -148,7 +156,7 @@ export default function Home() {
       </section>
 
       {/* Missão, Visão, Valores */}
-      <section className="py-16">
+      <section className="py-16 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -209,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* Parceiros */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-50 animate-fadeInUp">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -249,7 +257,7 @@ export default function Home() {
         </div>
       </section>
 
-{/* Call to Action com imagem */}
+      {/* Call to Action com imagem */}
       <section className="relative overflow-hidden">
         <div className="mx-auto grid grid-cols-1 lg:grid-cols-2">
           {/* Seção de imagem - agora com altura fixa em todas as telas */}
@@ -265,8 +273,8 @@ export default function Home() {
           </div>
 
           {/* Seção de texto - cor de fundo */}
-          <div className="bg-[var(--casa-roxo)] p-8 sm:p-12 lg:p-16 order-2 lg:order-1">
-            <div className="h-full flex flex-col justify-center">
+          <div className="bg-[var(--casa-roxo)] py-10 order-2 lg:order-1 px-4">
+            <div className="h-full flex flex-col justify-center w-full lg:pl-24 md:pl-2">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6 text-white">
                 Quer conhecer nossos projetos de perto?
               </h2>

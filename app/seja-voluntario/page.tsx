@@ -69,13 +69,13 @@ export default function SejaVoluntario() {
         </div>
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="relative h-full flex items-center justify-center text-center text-white lg:justify-start animate-fadeInUp">
-          <div className="max-w-4xl px-4">
-            <div id="Textos" className="flex-col">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div className="flex flex-col py-8">
               <h1 className="text-3xl md:text-6xl font-bold mb-6 text-left">
                 Seja{" "}
                 <span className="text-[var(--casa-amarelo)]"> voluntário</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto md:text-justify text-left">
+              <p className="text-sm md:text-2xl mb-8 max-w-3xl text-left">
                 Transforme vidas e seja parte da nossa história de amor e
                 dedicação à comunidade!
               </p>
