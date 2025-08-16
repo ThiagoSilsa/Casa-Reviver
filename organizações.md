@@ -152,7 +152,6 @@ Roxo-Primário: #893ab8
     - Adicionar mais efeitos
     - Contato para whatsapp?
     - Passar todas as imgs para <Image/>
-    - Margem geral, linha imaginária
     - Colocar depoimentos em cada projeto
     - Poder abrir as fotos
     - Melhorar SEO da página

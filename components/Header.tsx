@@ -1,22 +1,22 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
-import { Menu, X, Heart } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import { useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { Menu, X, Heart } from "lucide-react";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const Header = () => {
+function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
 
   const navigationItems = [
-    { href: '/', label: 'Home' },
-    { href: '/historia', label: 'História' },
-    { href: '/projetos', label: 'Projetos' },
-    { href: '/atividades', label: 'Atividades' },
-    { href: '/contato', label: 'Contato' },
+    { href: "/", label: "Home" },
+    { href: "/historia", label: "História" },
+    { href: "/projetos", label: "Projetos" },
+    { href: "/atividades", label: "Atividades" },
+    { href: "/contato", label: "Contato" },
   ];
 
   const isActive = (href: string) => pathname === href;
@@ -27,16 +27,16 @@ const Header = () => {
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-2">
-            <div className="w-20 h-20 rounded-full flex items-center justify-center">
+            <div className="w-20 h-10 rounded-full flex items-center justify-center">
               <Image
-              width={100}
-              height={60}
-              alt="Logo Casa Reviver Preta"
-              src="/logo/LogoPretaPura.png"
-            />
+                width={60}
+                height={60}
+                alt="Logo Casa Reviver Preta"
+                src="/logo/LogoPretaPura.png"
+              />
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Casa Reviver</h1>
+              <h1 className="font-bold text-gray-900">Casa Reviver</h1>
             </div>
           </Link>
 
@@ -48,7 +48,9 @@ const Header = () => {
                 href={item.href}
                 className={cn(
                   "text-sm font-medium transition-colors hover:text-[var(--casa-laranja)]",
-                  isActive(item.href) ? "text-[var(--casa-laranja)]" : "text-gray-700"
+                  isActive(item.href)
+                    ? "text-[var(--casa-laranja)]"
+                    : "text-gray-700"
                 )}
               >
                 {item.label}
@@ -77,7 +79,11 @@ const Header = () => {
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="lg:hidden p-2 rounded-md text-gray-700 hover:text-[var(--casa-laranja)]"
           >
-            {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -122,6 +128,6 @@ const Header = () => {
       </div>
     </header>
   );
-};
+}
 
 export default Header;
