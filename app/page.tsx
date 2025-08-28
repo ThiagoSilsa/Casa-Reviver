@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 
 import Counter from "@/components/Counter";
+import BlurText from "@/components/BlurText";
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -111,16 +112,13 @@ export default function Home() {
             </p>
           </div>
 
-          
-
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-[var(--casa-laranja)] rounded-full flex items-center justify-center mx-auto mb-4 animate-float">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-laranja)] mb-2">
-                <Counter end={200}
-                />+
+                <Counter end={200} />+
               </h3>
               <p className="text-gray-600">Famílias atendidas</p>
             </div>
@@ -129,7 +127,7 @@ export default function Home() {
                 <Award className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-azul)] mb-2">
-                <Counter end={19}/>
+                <Counter end={19} />
               </h3>
               <p className="text-gray-600">Anos de história</p>
             </div>
@@ -138,7 +136,7 @@ export default function Home() {
                 <Target className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-bold text-[var(--casa-roxo)] mb-2">
-                <Counter end={8}/>
+                <Counter end={8} />
               </h3>
               <p className="text-gray-600">Projetos ativos</p>
             </div>
