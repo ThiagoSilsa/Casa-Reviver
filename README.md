@@ -130,5 +130,3 @@ Tecnologias modernas, código limpo e foco em acessibilidade e impacto social.
 
 ---
 
-## 🖼️ Prints do Projeto
-
